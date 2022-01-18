@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+.coverage
+.cache
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# Environment
+.venv
+
+# Temporary files
+*~
+*.swp
