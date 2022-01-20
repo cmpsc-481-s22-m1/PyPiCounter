@@ -1,5 +1,13 @@
-As a… computer science educator,
-I want to… know how many class definitions are in a Python module or package.
+# Given a counting tool that will be implemented, when putting the specifications set
+# by the user into our user interface, then it will print out the correct number of
+# class definitions that are inside a Python module or package.
 
-Projected time: (3  Hours)
-Adriana S
+from itertools import count
+
+counter = count()
+
+class Sample(something):
+    number_of_classes = counter(0)
+
+    def __init__(self):
+        self.number_of_classes = next(self.number_of_classes)
