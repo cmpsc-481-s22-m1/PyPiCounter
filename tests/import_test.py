@@ -1,5 +1,2 @@
-import libcst
+import pytest
 import csv
-
-def test_function():
-  """Function to test the counting of import statements."""
