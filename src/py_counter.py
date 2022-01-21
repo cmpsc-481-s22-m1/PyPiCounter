@@ -10,4 +10,4 @@ def PyCount():
         print(len(definitions))
         
     def count_import_statements():
-        print(m.findall(search, m.Import()))
+        print(len(m.findall(search, m.Import())))
