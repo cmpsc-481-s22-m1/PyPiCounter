@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "project-template"
+name = "PyCount"
 version = "0.1.0"
 description = "Simple Python project template"
 authors = [""]
