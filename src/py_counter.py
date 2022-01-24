@@ -15,6 +15,13 @@ def PyCount():
     def count_functions_without_docstring():
         functions_list = m.findall(search, m.functionDef())
         for f in functions_list:
-            if functions_list(f).getdocstring() == false:
+            if functions_list(f).get_docstring() == false:
+                count++
+         print(count)
+        
+    def count_classes_without_docstring():
+        class_definitions = m.findall(search, m.ClassDef())
+        for c in class_definitions:
+            if class_definitions(c).get_docstring() == false:
                 count++
          print(count)
