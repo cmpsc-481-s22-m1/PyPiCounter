@@ -5,7 +5,7 @@
 - This project is a collaborative enhancement to import this tool into GatorGrader
 to create new GatorGrader checks. The program utilizes LibCST, which parses Python
 code as a CST (Concrete Syntax Tree) that keeps all formatting details (comments,
-whitespaces, parentheses, etc.)
+white spaces, parentheses, etc.)
 
 ## Why is the project useful?
 
