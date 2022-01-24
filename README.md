@@ -24,6 +24,6 @@ for assistance.
 
 ## Who maintains and contributes to the project?
 
-- The people who maintain and contribute to this project are Alexis Caldwell(@caldwella2),
-Adriana Solis(@solisa986), Rachael Harris(@rachaelharris), Ramon Guzman(@guzmanr04),
-and Ryan Hilty(@RyanHiltyAllegheny).
+- The people who maintain and contribute to this project are Alexis Caldwell,
+Adriana Solis, Rachael Harris, Ramon Guzman,
+and Ryan H.
