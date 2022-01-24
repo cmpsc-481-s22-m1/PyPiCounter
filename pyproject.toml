@@ -2,11 +2,16 @@
 name = "PyCount"
 version = "0.1.0"
 description = "Simple Python project template"
-authors = [""]
+authors = ["Adriana Solis <solisa@allegheny.edu>"]
 license = "MIT"
+
+[tool.poetry.scripts]
+PyCount = "PyCount.main:cli"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
+typer = {extras = ["all"], version = "^0.3.2"}
+rich = "^10.9.0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
