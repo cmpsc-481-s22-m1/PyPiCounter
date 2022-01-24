@@ -10,7 +10,7 @@
 
 ## How users can get started with the project?
 
-- TODO 
+- TODO
 
 ## Where can users get help with the project?
 
