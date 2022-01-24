@@ -1,16 +1,25 @@
 import libcst.matchers as m
 import libcst as cst
 
-def PyCount():
-    # parses through the given test file
-    search = cst.parse_module(open("tests/import_test.py").read())
+class PyCount:
 
-    def count_class_definitions():
-        definitions = m.findall(search, m.ClassDef())
+    def __init__(self):
+        # parses through the
+        self.search = cst.parse_module(open("tests/import_test.py").read())
+
+
+    def count_class_definitions(self):
+        definitions = m.findall(self.search, m.ClassDef())
         print(len(definitions))
 
-    def count_import_statements():
-        print(len(m.findall(search, m.Import())))
+    def count_import_statements(self):
+        print(len(m.findall(self.search, m.Import())))
 
-    def count_comments():
-        print(len(m.findall(search, m.Comment())))
+    def count_comments(self):
+        print(len(m.findall(self.search, m.Comment())))
+
+
+pycount = PyCount()
+pycount.count_class_definitions()
+pycount.count_import_statements()
+pycount.count_comments()
