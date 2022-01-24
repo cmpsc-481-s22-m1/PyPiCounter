@@ -12,6 +12,11 @@ def PyCount():
     def count_import_statements():
         print(len(m.findall(search, m.Import())))
     
+
+    def count_function_definitions():
+        FuncDefinitions = m.findall(search, m.FunctionDef())
+        print(len(FuncDefinitions))
+        
     def count_functions_without_docstring():
         functions_list = m.findall(search, m.functionDef())
         for f in functions_list:
