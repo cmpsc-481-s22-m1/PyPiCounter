@@ -8,6 +8,9 @@ def PyCount():
     def count_class_definitions():
         definitions = m.findall(search, m.ClassDef())
         print(len(definitions))
-        
+
     def count_import_statements():
         print(len(m.findall(search, m.Import())))
+
+    def count_comments():
+        print(len(m.findall(search, m.Comment())))
