@@ -4,14 +4,19 @@ version = "0.1.0"
 description = "Simple Python project template"
 authors = ["Adriana Solis <solisa@allegheny.edu>"]
 license = "MIT"
+packages = [
+    { include = "py_counter.py", from="src" },
+    { include = "src/py_counter.py"},
+]
 
 [tool.poetry.scripts]
-PyCount = "PyCount.main:cli"
+PyCount = "src.command-line-interface:cli"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
 typer = {extras = ["all"], version = "^0.3.2"}
 rich = "^10.9.0"
+libcst = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
