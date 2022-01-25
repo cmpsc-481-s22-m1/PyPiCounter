@@ -1,5 +1,3 @@
-#!/usr/bin/env python -W ignore::DeprecationWarning
-
 import os
 from setuptools import setup
 

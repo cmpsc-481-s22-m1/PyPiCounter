@@ -1,3 +1,5 @@
+#!/usr/bin/env python -W ignore::DeprecationWarning
+
 """The command line interface for the PyCount program."""
 
 from rich.console import Console
