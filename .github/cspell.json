@@ -8,6 +8,8 @@
         "pytest",
         "pylint",
         "taskipy",
+        "Hilty",
+        "PyCount",
         "markdownlint",
         "pyproject",
         "virtualenvs",
