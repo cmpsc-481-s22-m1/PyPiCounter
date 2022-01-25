@@ -3,33 +3,26 @@ import libcst as cst
 
 
 class PyCount:
-
-
     def __init__(self):
         self.message = "Welcome to PyCount!"
         self.search = cst.parse_module(open("tests/import_test.py").read())
-
 
     def count_class_definitions(self):
         """Counting the class definitions."""
         print(len(m.findall(self.search, m.ClassDef())))
 
-
     def count_comments(self):
         """Counting the comments."""
         print(len(m.findall(self.search, m.Comment())))
-
 
     def count_import_statements(self):
         """Counting the import statements."""
         print(len(m.findall(self.search, m.Import())))
 
-
     def count_function_definitions(self):
         """Counting the function definitions."""
         FuncDefinitions = m.findall(self.search, m.FunctionDef())
         print(len(FuncDefinitions))
-
 
     def count_functions_without_docstring(self):
         """Counting the function definitions without docstrings."""
@@ -38,7 +31,6 @@ class PyCount:
             if f.get_docstring() == False:
                 count += 1
                 print(count)
-
 
     def count_classes_without_docstring(self):
         """Counting the class definitions without docstrings."""

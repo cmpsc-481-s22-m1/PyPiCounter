@@ -17,6 +17,7 @@ python = ">=3.7,<4.0"
 typer = {extras = ["all"], version = "^0.3.2"}
 rich = "^10.9.0"
 libcst = "^0.4.0"
+black = "^21.12b0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
@@ -26,7 +27,8 @@ pylint = "^2.12.2"
 
 [tool.taskipy.tasks]
 test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=hello tests/"
-lint = "pylint hello/ tests/"
+lint = "pylint hello/ tests/ src/"
+black = "black hello/ tests/ src/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
