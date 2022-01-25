@@ -1,4 +1,4 @@
-# PyCount ReadMe
+# Py-Count ReadMe
 
 ## What does the project do?
 
