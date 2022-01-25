@@ -16,6 +16,7 @@ more uniform way. This project is useful because of the exploration of LibCST.
 ## How users can get started with the project?
 
 Users can get started with this project by following the following steps:
+
 1. Clone this repository and `cd` into the project folder
 2. Run the command ```poetry install``` to install the dependencies for this project
 3. To familiarize yourself with the arguments accepted for this project, run the
