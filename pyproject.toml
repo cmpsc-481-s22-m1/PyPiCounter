@@ -2,7 +2,7 @@
 name = "PyCount"
 version = "0.1.0"
 description = "Simple Python project template"
-authors = ["Adriana Solis <solisa@allegheny.edu>"]
+authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
 license = "MIT"
 packages = [
     { include = "py_counter.py", from="src" },
@@ -10,7 +10,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-PyCount = "src.command-line-interface:cli"
+PyCount = "src.command_line_interface:cli"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"

@@ -4,7 +4,7 @@ from rich.console import Console
 
 import typer
 
-from py_counter import PyCount
+from src.py_counter import PyCount
 
 cli = typer.Typer()
 
@@ -14,7 +14,7 @@ pycount = PyCount()
 
 
 @cli.command()
-def main(
+def main(  # pylint: disable=R0913
     class_def: bool = typer.Option(False, "--class_def"),
     import_statements: bool = typer.Option(False, "--import_statements"),
     comment: bool = typer.Option(False, "--comment"),
