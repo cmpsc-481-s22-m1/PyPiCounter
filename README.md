@@ -32,4 +32,4 @@ for assistance.
 
 - The people who maintain and contribute to this project are Alexis Caldwell,
 Adriana Solis, Rachael Harris, Ramon Guzman,
-and Ryan H.
+and Ryan Hilty
