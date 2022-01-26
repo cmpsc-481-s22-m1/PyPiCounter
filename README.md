@@ -1,4 +1,4 @@
-# PyCount ReadMe
+# Py-Count ReadMe
 
 ## What does the project do?
 
@@ -15,7 +15,13 @@ more uniform way. This project is useful because of the exploration of LibCST.
 
 ## How users can get started with the project?
 
-- TODO
+Users can get started with this project by following the following steps:
+
+1. Clone this repository and `cd` into the project folder
+2. Run the command ```poetry install``` to install the dependencies for this project
+3. To familiarize yourself with the arguments accepted for this project, run the
+command ```poetry run PyCount --help```
+4. Once you find your chosen arguments, run ```poetry run Pycount --argument```
 
 ## Where can users get help with the project?
 
@@ -26,4 +32,4 @@ for assistance.
 
 - The people who maintain and contribute to this project are Alexis Caldwell,
 Adriana Solis, Rachael Harris, Ramon Guzman,
-and Ryan H.
+and Ryan Hilty
