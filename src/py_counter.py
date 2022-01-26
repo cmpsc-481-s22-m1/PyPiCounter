@@ -17,7 +17,7 @@ class PyCount:
         """Counting the class definitions."""
         print(len(m.findall(self.search, m.ClassDef())))
         
-    def count_class_definitions(self):
+    def count_if_statements(self):
         """Counting the class definitions."""
         print(len(m.findall(self.search, m.If())))
 
