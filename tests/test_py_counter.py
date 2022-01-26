@@ -22,3 +22,8 @@ def test_import_statements():
     """Test case for counting the import statements."""
     expected_imports = 2
     assert test_pycount.count_import_statements() == expected_imports
+    
+def test_count_if_statements():
+    """Test case for counting the if statements."""
+    expected_if = 1
+    assert test_pycount.count_if_statements() == expected_if
