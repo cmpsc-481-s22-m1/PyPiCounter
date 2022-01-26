@@ -16,8 +16,8 @@ class PyCount:
     def count_class_definitions(self):
         """Counting the class definitions."""
         print(len(m.findall(self.search, m.ClassDef())))
-
-    def count_comments(self):
+     
+   def count_comments(self):
         """Counting the comments."""
         print(len(m.findall(self.search, m.Comment())))
 
