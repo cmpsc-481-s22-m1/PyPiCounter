@@ -25,5 +25,5 @@ def test_import_statements():
 
 def test_count_if_statements():
     """Test case for counting the if statements."""
-    expected_if = 1
+    expected_if = 0
     assert test_pycount.count_if_statements() == expected_if

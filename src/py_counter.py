@@ -10,7 +10,7 @@ class PyCount:
     def __init__(self):
         """Declaring the self variable."""
         self.search = cst.parse_module(
-            open("src/sample_file.py").read()  # pylint: disable=R1732,W1514
+            open("input/sample_file.py").read()  # pylint: disable=R1732,W1514
         )
 
     def count_class_definitions(self):
@@ -34,7 +34,7 @@ class PyCount:
         func_definitions = m.findall(self.search, m.FunctionDef())
         return len(func_definitions)
 
-    def count_functions_without_docstring(self): # pylint: disable=R1710
+    def count_functions_without_docstring(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
         for find in functions_list:
@@ -42,7 +42,7 @@ class PyCount:
                 count += 1
                 return count
 
-    def count_classes_without_docstring(self): # pylint: disable=R1710
+    def count_classes_without_docstring(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions = m.findall(self.search, m.ClassDef())
         for finding in class_definitions:

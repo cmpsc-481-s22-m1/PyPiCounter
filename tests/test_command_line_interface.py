@@ -6,6 +6,7 @@ from src.command_line_interface import cli
 
 cli_runner = CliRunner()
 
+
 def test_main_class():
     """Test case to see if class argument is correct."""
     class_result = cli_runner.invoke(cli, ["--class_def"])
@@ -32,6 +33,7 @@ def test_main_function_def():
     function_def_result = cli_runner.invoke(cli, ["--function_def"])
     assert function_def_result.exit_code == 0
     assert "2" in function_def_result.stdout
+
 
 def test_main_function_without_docstrings():
     """Test case to see if function without docstrings argument is correct."""
