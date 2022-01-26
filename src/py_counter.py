@@ -24,6 +24,10 @@ class PyCount:
     def count_import_statements(self):
         """Counting the import statements."""
         return len(m.findall(self.search, m.Import()))
+    
+    def count_if_statements(self):
+        """Counting the if statements."""
+        return len(m.findall(self.search, m.If()))
 
     def count_function_definitions(self):
         """Counting the function definitions."""
