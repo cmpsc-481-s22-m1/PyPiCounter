@@ -27,7 +27,7 @@ pylint = "^2.12.2"
 
 [tool.taskipy.tasks]
 test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=src tests/"
-lint = "pylint/ tests/ src/"
+lint = "pylint tests/ src/"
 black = "tests/ src/"
 
 [build-system]
