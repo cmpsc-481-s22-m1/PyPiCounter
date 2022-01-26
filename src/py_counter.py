@@ -37,15 +37,17 @@ class PyCount:
     def count_functions_without_docstring(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
+        count = 0
         for find in functions_list:
             if find.get_docstring() is False:
                 count += 1
-                return count
+        return count
 
     def count_classes_without_docstring(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions = m.findall(self.search, m.ClassDef())
+        count = 0
         for finding in class_definitions:
             if finding.get_docstring() is False:
                 count += 1
-                return count
+        return count

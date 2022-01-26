@@ -39,11 +39,11 @@ def test_main_function_without_docstrings():
     """Test case to see if function without docstrings argument is correct."""
     func_wo_docstr_result = cli_runner.invoke(cli, ["--function_without_docstrings"])
     assert func_wo_docstr_result.exit_code == 0
-    assert "None" in func_wo_docstr_result.stdout
+    assert "0" in func_wo_docstr_result.stdout
 
 
 def test_main_class_without_docstrings():
     """Test case to see if class without docstrings argument is correct."""
     class_wo_docstr_result = cli_runner.invoke(cli, ["--class_without_docstrings"])
     assert class_wo_docstr_result.exit_code == 0
-    assert "None" in class_wo_docstr_result.stdout
+    assert "0" in class_wo_docstr_result.stdout
