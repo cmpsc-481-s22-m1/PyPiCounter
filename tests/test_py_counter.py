@@ -17,3 +17,8 @@ def test_count_comments():
     """Test case for counting the class definitions."""
     expected_comments = 7
     assert test_pycount.count_comments() == expected_comments
+    
+def test_import_statements():
+    """Test case for counting the import statements."""
+    expected_imports = 2
+    assert test_pycount.count_import_statements() == expected_imports
