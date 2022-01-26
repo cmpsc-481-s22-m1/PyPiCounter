@@ -15,24 +15,20 @@ class PyCount:
 
     def count_class_definitions(self):
         """Counting the class definitions."""
-        print(len(m.findall(self.search, m.ClassDef())))
-        
-    def count_if_statements(self):
-        """Counting the class definitions."""
-        print(len(m.findall(self.search, m.If())))
+        return len(m.findall(self.search, m.ClassDef()))
 
     def count_comments(self):
         """Counting the comments."""
-        print(len(m.findall(self.search, m.Comment())))
+        return len(m.findall(self.search, m.Comment()))
 
     def count_import_statements(self):
         """Counting the import statements."""
-        print(len(m.findall(self.search, m.Import())))
+        return len(m.findall(self.search, m.Import()))
 
     def count_function_definitions(self):
         """Counting the function definitions."""
         func_definitions = m.findall(self.search, m.FunctionDef())
-        print(len(func_definitions))
+        return len(func_definitions)
 
     def count_functions_without_docstring(self):
         """Counting the function definitions without docstrings."""
@@ -40,7 +36,7 @@ class PyCount:
         for find in functions_list:
             if find.get_docstring() is False:
                 count += 1
-                print(count)
+                return count
 
     def count_classes_without_docstring(self):
         """Counting the class definitions without docstrings."""
@@ -48,4 +44,4 @@ class PyCount:
         for finding in class_definitions:
             if finding.get_docstring() is False:
                 count += 1
-                print(count)
+                return count
