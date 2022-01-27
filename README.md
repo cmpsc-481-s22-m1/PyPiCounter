@@ -61,11 +61,11 @@ are listed below:
 
 These are the different types of arguments that PyPiCount will accept in this release.
 
-4. Once you find your chosen arguments, run the following
+Once you find your chosen arguments, run the following:
 
-  ```python
-  poetry run pypicount --[argument] --input-file path/to/file
-  ```
+```python
+poetry run pypicount --[argument] --input-file path/to/file
+```
 
 ## Example of Output
 
