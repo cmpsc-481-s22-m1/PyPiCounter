@@ -29,14 +29,26 @@ def main(  # pylint: disable=R0913
     """Main method to display the different options."""
 
     if class_def:
-        print(pycount.count_class_definitions())
+        console.print()
+        class1 = pycount.count_class_definitions()
+        console.print(f"The number of class definitions found in the file: {class1}")
     if import_statements:
-        print(pycount.count_import_statements())
+        console.print()
+        import1 = pycount.count_import_statements()
+        console.print(f"The number of import statements found in the file: {import1}")
     if comment:
-        print(pycount.count_comments())
+        console.print()
+        comment1 = pycount.count_comments()
+        console.print(f"The number of comments found in the file: {comment1}")
     if function_def:
-        print(pycount.count_function_definitions())
+        console.print()
+        function1 = pycount.count_function_definitions()
+        console.print(f"The number of function definitions found in the file: {function1}")
     if function_without_docstrings:
-        print(pycount.count_functions_without_docstring())
+        console.print()
+        without1 = pycount.count_functions_without_docstring()
+        console.print(f"The number of functions without docstrings found in the file: {without1}")
     if class_without_docstrings:
-        print(pycount.count_classes_without_docstring())
+        console.print()
+        without2 = pycount.count_classes_without_docstring()
+        console.print(f"The number of classes without docstrings found in the file: {without2}")
