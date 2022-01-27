@@ -17,13 +17,13 @@ python = ">=3.7,<4.0"
 typer = {extras = ["all"], version = "^0.3.2"}
 rich = "^10.9.0"
 libcst = "^0.4.0"
-black = "^21.12b0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pylint = "^2.12.2"
+black = "^21.12b0"
 
 [tool.taskipy.tasks]
 test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=src tests/"
