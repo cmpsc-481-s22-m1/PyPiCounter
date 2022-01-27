@@ -7,10 +7,10 @@ import libcst as cst
 class PyCount:
     """Class for the python counter."""
 
-    def __init__(self):
+    def __init__(self, file):
         """Declaring the self variable."""
         self.search = cst.parse_module(
-            open("tests/input/sample_file.py").read()  # pylint: disable=R1732,W1514
+            open(file).read()  # pylint: disable=R1732,W1514
         )
 
     def count_class_definitions(self):

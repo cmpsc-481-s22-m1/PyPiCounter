@@ -2,18 +2,19 @@
 
 from src.py_counter import PyCount
 
-test_pycount = PyCount()
 
+FILE = "input/sample_file.py"
+test_pycount = PyCount(FILE)
 
 def test_count_class_defintions():
     """Test case for counting the class definitions."""
-    expected_class = 1
+    expected_class = 2
     assert test_pycount.count_class_definitions() == expected_class
 
 
 def test_count_comments():
     """Test case for counting the class definitions."""
-    expected_comments = 7
+    expected_comments = 9
     assert test_pycount.count_comments() == expected_comments
 
 
@@ -25,7 +26,7 @@ def test_import_statements():
 
 def test_count_if_statements():
     """Test case for counting the if statements."""
-    expected_if = 0
+    expected_if = 1
     assert test_pycount.count_if_statements() == expected_if
 
 def test_count_functions_without_docstrings():
