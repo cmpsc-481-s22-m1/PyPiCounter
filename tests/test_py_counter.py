@@ -42,4 +42,4 @@ def test_count_classes_without_docstrings():
 def test_count_function_definitions():
     """Test case for counting the number of functions."""
     expected_function_definitions = 2
-    assert test_pycount.count_function_definitions() == expected_function_definitions)
+    assert test_pycount.count_function_definitions() == expected_function_definitions
