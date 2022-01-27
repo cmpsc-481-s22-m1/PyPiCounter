@@ -10,7 +10,7 @@ class PyCount:
     def __init__(self):
         """Declaring the self variable."""
         self.search = cst.parse_module(
-            open("input/sample_file.py").read()  # pylint: disable=R1732,W1514
+            open("tests/input/sample_file.py").read()  # pylint: disable=R1732,W1514
         )
 
     def count_class_definitions(self):
