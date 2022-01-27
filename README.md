@@ -39,33 +39,33 @@ command ```poetry run pypicount --help```. This command displays all of the
 different arguments that can be passed. The list of the different arguments
 are listed below:
 
-```python
-Options:
-  --input-file PATH              [required]
-  --class_def                    [default: False]
-  --import_statements            [default: False]
-  --comment                      [default: False]
-  --function_def                 [default: False]
-  --if_statements                [default: False]
-  --function_without_docstrings  [default: False]
-  --function_with_docstrings     [default: False]
-  --class_with_docstrings        [default: False]
-  --class_without_docstrings     [default: False]
-  --install-completion           Install completion for the current shell.
-  --show-completion              Show completion for the current shell, to
-                                 copy it or customize the installation.
+  ```python
+  Options:
+    --input-file PATH              [required]
+    --class_def                    [default: False]
+    --import_statements            [default: False]
+    --comment                      [default: False]
+    --function_def                 [default: False]
+    --if_statements                [default: False]
+    --function_without_docstrings  [default: False]
+    --function_with_docstrings     [default: False]
+    --class_with_docstrings        [default: False]
+    --class_without_docstrings     [default: False]
+    --install-completion           Install completion for the current shell.
+    --show-completion              Show completion for the current shell, to
+                                   copy it or customize the installation.
 
-  --help                         Show this message and exit.
+    --help                         Show this message and exit.
 
-```
+  ```
 
 These are the different types of arguments that PyPiCount will accept in this release.
 
-4. Once you find your chosen arguments, run:
+4. Once you find your chosen arguments, run the following
 
-```python
-poetry run pypicount --[argument] --input-file path/to/file
-```
+  ```python
+  poetry run pypicount --[argument] --input-file path/to/file
+  ```
 
 ## Example of Output
 
