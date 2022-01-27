@@ -42,4 +42,3 @@ def main(  # pylint: disable=R0913
         console.print("\n# of classes w/o docstrings: " + str(pycount.count_classes_without_docstring())) # pylint: disable=C0301
     if if_statements:
         console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
->>>>>>> release
