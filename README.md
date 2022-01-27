@@ -24,8 +24,8 @@ any other automated grading tool as well.
 
 - Within LibCST, it has many nodes to "match" modules, expressions, and
 statements which allowed us as programmers to complete our user stories in a
-more uniform way. This project is useful because of the exploration of LibCST, 
-which ultimately allows end users to specify a given construct they would like 
+more uniform way. This project is useful because of the exploration of LibCST,
+which ultimately allows end users to specify a given construct they would like
 to identify in the source code (as LibCST will find all matches of this construct).
 
 ## Getting Started
@@ -61,7 +61,7 @@ with the following format:
 
 ## Authors
 
-- The people who maintain and contribute to this project are 
+- The people who maintain and contribute to this project are
   - Alexis Caldwell, [@caldwella2](https://github.com/caldwella2)
   - Adriana Solis, [@solisa986](https://github.com/solisa986)
   - Rachael Harris, [@rachaelharris](https://github.com/rachaelharris)
