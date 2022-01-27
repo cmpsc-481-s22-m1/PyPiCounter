@@ -2,8 +2,9 @@
 
 from src.py_counter import PyCount
 
-test_pycount = PyCount()
 
+file = "input/sample_file.py"
+test_pycount = PyCount(file)
 
 def test_count_class_defintions():
     """Test case for counting the class definitions."""
