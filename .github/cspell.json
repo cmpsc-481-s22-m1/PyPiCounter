@@ -15,7 +15,13 @@
         "virtualenvs",
         "git",
         "gitignore",
-        "github"
+        "github",
+        "docstrings",
+        "guzmanr",
+        "caldwella",
+        "rachaelharris",
+        "solisa",
+        "Picount"
     ],
     "ignorePaths": [
         ".github/**",
