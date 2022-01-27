@@ -20,6 +20,7 @@ def main(  # pylint: disable=R0913
     import_statements: bool = typer.Option(False, "--import_statements"),
     comment: bool = typer.Option(False, "--comment"),
     function_def: bool = typer.Option(False, "--function_def"),
+    if_statements: bool = typer.Option(False, "--if_statements"),
     function_without_docstrings: bool = typer.Option(
         False, "--function_without_docstrings"
     ),
@@ -28,26 +29,16 @@ def main(  # pylint: disable=R0913
     """Main method to display the different options."""
     pycount = PyCount(input_file)
     if class_def:
-        console.print()
-        class1 = pycount.count_class_definitions()
-        console.print(f"The number of class definitions found in the file: {class1}")
+        console.print("\n# of class definitions: " + str(pycount.count_class_definitions()))
     if import_statements:
-        console.print()
-        import1 = pycount.count_import_statements()
-        console.print(f"The number of import statements found in the file: {import1}")
+        console.print("\n# of import statements: " + str(pycount.count_import_statements()))
     if comment:
-        console.print()
-        comment1 = pycount.count_comments()
-        console.print(f"The number of comments found in the file: {comment1}")
+        console.print("\n# of comments: " + str(pycount.count_comments()))
     if function_def:
-        console.print()
-        function1 = pycount.count_function_definitions()
-        console.print(f"The number of function definitions found in the file: {function1}")
+        console.print("\n# of function definitions: " + str(pycount.count_function_definitions()))
     if function_without_docstrings:
-        console.print()
-        without1 = pycount.count_functions_without_docstring()
-        console.print(f"The number of functions without docstrings found in the file: {without1}")
+        console.print("\n# of functions w/o docstrings: " + str(pycount.count_functions_without_docstring())) # pylint: disable=C0301
     if class_without_docstrings:
-        console.print()
-        without2 = pycount.count_classes_without_docstring()
-        console.print(f"The number of classes without docstrings found in the file: {without2}")
+        console.print("\n# of classes w/o docstrings: " + str(pycount.count_classes_without_docstring())) # pylint: disable=C0301
+    if if_statements:
+        console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
