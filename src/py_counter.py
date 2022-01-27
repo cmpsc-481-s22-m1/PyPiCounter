@@ -32,7 +32,7 @@ class PyCount:
     def count_function_definitions(self):
         """Counting the function definitions."""
         return len(m.findall(self.search, m.FunctionDef()))
-        
+
     def count_functions_without_docstring(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
