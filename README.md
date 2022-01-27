@@ -20,8 +20,8 @@ Users can get started with this project by following the following steps:
 1. Clone this repository and `cd` into the project folder
 2. Run the command ```poetry install``` to install the dependencies for this project
 3. To familiarize yourself with the arguments accepted for this project, run the
-command ```poetry run PyCount --help```
-4. Once you find your chosen arguments, run ```poetry run Pycount --argument```
+command ```poetry run PyCount --help```.
+4. Once you find your chosen arguments, run ```poetry run PyCount --argument```
 
 ## Where can users get help with the project?
 

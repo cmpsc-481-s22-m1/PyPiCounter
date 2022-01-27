@@ -3,7 +3,7 @@
 from src.py_counter import PyCount
 
 
-FILE = "input/sample_file.py"
+FILE = "tests/input/sample_file.py"
 test_pycount = PyCount(FILE)
 
 def test_count_class_defintions():
@@ -31,10 +31,10 @@ def test_count_if_statements():
 
 def test_count_functions_without_docstrings():
     """Test case for counting the number of functions that do not have docstrings."""
-    expected_function_dst = 0
+    expected_function_dst = None
     assert test_pycount.count_functions_without_docstring() == expected_function_dst
 
 def test_count_classes_without_docstrings():
     """Test case for counting the number of Classes that do not have docstrings."""
-    expected_classes_dst = 0
+    expected_classes_dst = None
     assert test_pycount.count_functions_without_docstring() == expected_classes_dst
