@@ -21,15 +21,9 @@ def main(  # pylint: disable=R0913
     comment: bool = typer.Option(False, "--comment"),
     function_def: bool = typer.Option(False, "--function_def"),
     if_statements: bool = typer.Option(False, "--if_statements"),
-    function_without_docstrings: bool = typer.Option(
-        False, "--function_without_docstrings"
-    ),
-    function_with_docstrings: bool = typer.Option(
-        False, "--function_with_docstrings"
-    ),
-    classes_with_docstrings: bool = typer.Option(
-        False, "--classes_with_docstrings"
-    ),
+    function_without_docstrings: bool = typer.Option(False, "--function_without_docstrings"),
+    function_with_docstrings: bool = typer.Option(False, "--function_with_docstrings"),
+    class_with_docstrings: bool = typer.Option(False, "--class_with_docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
 ):
     """Main method to display the different options."""
@@ -55,7 +49,7 @@ def main(  # pylint: disable=R0913
     if class_without_docstrings:
         console.print("\n# of classes w/o docstrings: " + str(pycount.count_classes_without_docstring())) # pylint: disable=C0301
 
-    if classes_with_docstrings:
+    if class_with_docstrings:
         console.print("\n# of functions with docstrings: " + str(pycount.count_classes_with_docstring())) # pylint: disable=C0301
 
     if if_statements:

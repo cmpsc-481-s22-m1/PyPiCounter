@@ -80,6 +80,6 @@ class PyCount:
         total = []
         for find in class_definitions2:
             if find.get_docstring() is not None:
-                total_count.append(count)
+                total.append(count)
                 count += 1
         return count
