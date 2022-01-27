@@ -39,7 +39,7 @@ command ```poetry run pypicount --help```. This command displays all of the
 different arguments that can be passed. The list of the different arguments
 are listed below:
 
-```
+```python
 Options:
   --input-file PATH              [required]
   --class_def                    [default: False]
@@ -58,21 +58,25 @@ Options:
   --help                         Show this message and exit.
 
 ```
+
 These are the different types of arguments that PyPiCount will accept in this release.
 
-4. Once you find your chosen arguments, run ```poetry run pypicount --[argument] --input-file [path/to/file]```
+4. Once you find your chosen arguments, run:
+```python
+poetry run pypicount --[argument] --input-file [path/to/file]
+```
 
 ## Example of Output
 
 Sample run command:
 
-```
+```python
 poetry run pypicount --class_with_docstrings --input-file tests/input/sample_file.py
 ```
 
 Sample Output:
 
-```
+```python
 # of functions with docstrings: 1
 ```
 
