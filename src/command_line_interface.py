@@ -34,9 +34,9 @@ def main(  # pylint: disable=R0913
     if import_statements:
         print("# of import statements: " + pycount.count_import_statements())
     if comment:
-        print("# of comments: "pycount.count_comments())
+        print("# of comments: " + pycount.count_comments())
     if function_def:
-        print("# of function definitions: "pycount.count_function_definitions())
+        print("# of function definitions: " + pycount.count_function_definitions())
     if function_without_docstrings:
         print("# of functions w/o docstrings: " + pycount.count_functions_without_docstring())
     if class_without_docstrings:
