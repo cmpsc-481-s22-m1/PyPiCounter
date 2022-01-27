@@ -18,6 +18,7 @@ pycount = PyCount()
 @cli.command()
 def main(  # pylint: disable=R0913
     class_def: bool = typer.Option(False, "--class_def"),
+    if_statements: bool = typer.Option(False, "--if_statements"),
     import_statements: bool = typer.Option(False, "--import_statements"),
     comment: bool = typer.Option(False, "--comment"),
     function_def: bool = typer.Option(False, "--function_def"),
@@ -29,14 +30,16 @@ def main(  # pylint: disable=R0913
     """Main method to display the different options."""
 
     if class_def:
-        print(pycount.count_class_definitions())
+        print("# of class definitions: " + pycount.count_class_definitions())
     if import_statements:
-        print(pycount.count_import_statements())
+        print("# of import statements: " + pycount.count_import_statements())
     if comment:
-        print(pycount.count_comments())
+        print("# of comments: " + pycount.count_comments())
     if function_def:
-        print(pycount.count_function_definitions())
+        print("# of function definitions: " + pycount.count_function_definitions())
     if function_without_docstrings:
-        print(pycount.count_functions_without_docstring())
+        print("# of functions w/o docstrings: " + pycount.count_functions_without_docstring())
     if class_without_docstrings:
-        print(pycount.count_classes_without_docstring())
+        print("# of classes w/o docstrings: " + pycount.count_classes_without_docstring())
+    if if_statements:
+        print("# of if statements: " + pycount.count_if_statements())
