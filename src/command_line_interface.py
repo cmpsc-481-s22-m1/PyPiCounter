@@ -29,14 +29,14 @@ def main(  # pylint: disable=R0913
     """Main method to display the different options."""
 
     if class_def:
-        pycount.count_class_definitions()
+        print(pycount.count_class_definitions())
     if import_statements:
-        pycount.count_import_statements()
+        print(pycount.count_import_statements())
     if comment:
-        pycount.count_comments()
+        print(pycount.count_comments())
     if function_def:
-        pycount.count_function_definitions()
+        print(pycount.count_function_definitions())
     if function_without_docstrings:
-        pycount.count_functions_without_docstring()
+        print(pycount.count_functions_without_docstring())
     if class_without_docstrings:
-        pycount.count_classes_without_docstring()
+        print(pycount.count_classes_without_docstring())

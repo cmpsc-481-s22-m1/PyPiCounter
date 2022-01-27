@@ -26,9 +26,9 @@ pytest-cov = "^3.0.0"
 pylint = "^2.12.2"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=hello tests/"
-lint = "pylint hello/ tests/ src/"
-black = "black hello/ tests/ src/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=src tests/"
+lint = "pylint tests/ src/"
+black = "black tests/ src/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
