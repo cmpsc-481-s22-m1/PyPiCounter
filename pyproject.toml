@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "PyCount"
+name = "PyPiCount"
 version = "0.1.0"
-description = "Simple Python project template"
+description = "A counting program used for different Pythong packages and modules."
 authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
 license = "MIT"
 packages = [
@@ -10,25 +10,24 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-PyCount = "src.command_line_interface:cli"
+pypicount = "src.command_line_interface:cli"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
 typer = {extras = ["all"], version = "^0.3.2"}
 rich = "^10.9.0"
 libcst = "^0.4.0"
-black = "^21.12b0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.9.0"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pylint = "^2.12.2"
+black = "^21.12b0"
 
 [tool.taskipy.tasks]
 test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=src tests/"
 lint = "pylint tests/ src/"
-black = "black tests/ src/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

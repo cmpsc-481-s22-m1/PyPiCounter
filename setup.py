@@ -7,7 +7,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "PyCount", # this is the name of the package
+    name = "PyPiCount", # this is the name of the package
     version = "0.1.0", # the initial release version
     author = "Adriana Solis, Alexis Caldwell, Rachael Harris, Ramon Guzman, Ryan Hilty", # author names
     author_email = "solisa@allegheny.edu, caldwella2@allegheny.edu, harrisr@allegheny.edu, guzmanr@allegheny.edu, hiltyr@allegheny.edu",
