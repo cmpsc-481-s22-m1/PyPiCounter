@@ -31,10 +31,20 @@ def test_count_if_statements():
 
 def test_count_functions_without_docstrings():
     """Test case for counting the number of functions that do not have docstrings."""
-    expected_function_dst = None
+    expected_function_dst = 3
     assert test_pycount.count_functions_without_docstring() == expected_function_dst
+
+def test_count_functions_with_docstrings():
+    """Test case for counting the number of functions that do not have docstrings."""
+    expected_function_dst_2 = 3
+    assert test_pycount.count_functions_with_docstring() == expected_function_dst_2
 
 def test_count_classes_without_docstrings():
     """Test case for counting the number of Classes that do not have docstrings."""
-    expected_classes_dst = None
-    assert test_pycount.count_functions_without_docstring() == expected_classes_dst
+    expected_classes_dst = 1
+    assert test_pycount.count_classes_without_docstring() == expected_classes_dst
+
+def test_count_classes_with_docstrings():
+    """Test case for counting the number of Classes that do not have docstrings."""
+    expected_classes_dst_2 = 1
+    assert test_pycount.count_classes_with_docstring() == expected_classes_dst_2
