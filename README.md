@@ -51,13 +51,13 @@ A list of potential arguments includes:
 
 ## Sample Output
 
-```
+```python
 poetry run PyPiCount --class_def
 ```
 
 Output:
 
-```
+```python
 The number of class definitions found in the file: 1
 ```
 
