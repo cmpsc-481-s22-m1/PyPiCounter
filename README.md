@@ -79,7 +79,6 @@ Sample Output:
 
 ```python
 # of functions with docstrings: 1
-```
 
 ## Help and Bug Fixes
 
