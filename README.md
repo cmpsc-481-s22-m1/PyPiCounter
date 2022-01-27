@@ -20,7 +20,7 @@ white spaces, parentheses, etc.).
 As a released tool on PiPy, this tool can be imported into
 any other automated grading tool as well.
 
-## Why is the project useful?
+## Usefullness of Project
 
 - Within LibCST, it has many nodes to "match" modules, expressions, and
 statements which allowed us as programmers to complete our user stories in a
@@ -35,31 +35,50 @@ Users can get started with this project by following the following steps:
 1. Clone this repository and `cd` into the project folder
 2. Run the command ```poetry install``` to install the dependencies for this project.
 3. To familiarize yourself with the arguments accepted for this project, run the
-command ```poetry run PyPiCount --help```. This command displays all of the
+command ```poetry run pypicount --help```. This command displays all of the
 different arguments that can be passed. The list of the different arguments
-are listed below.
-4. Once you find your chosen arguments, run ```poetry run PyPicount --[argument]```
+are listed below:
 
-A list of potential arguments includes:
+  ```python
+  Options:
+    --input-file PATH              [required]
+    --class_def                    [default: False]
+    --import_statements            [default: False]
+    --comment                      [default: False]
+    --function_def                 [default: False]
+    --if_statements                [default: False]
+    --function_without_docstrings  [default: False]
+    --function_with_docstrings     [default: False]
+    --class_with_docstrings        [default: False]
+    --class_without_docstrings     [default: False]
+    --install-completion           Install completion for the current shell.
+    --show-completion              Show completion for the current shell, to
+                                   copy it or customize the installation.
 
-- `class_def`
-- `import_statements`
-- `comment`
-- `function_def`
-- `classes_without_docstrings`
-- `functions_without_docstrings`
+    --help                         Show this message and exit.
 
-## Sample Output
+  ```
+
+These are the different types of arguments that PyPiCount will accept in this release.
+
+Once you find your chosen arguments, run the following:
 
 ```python
-poetry run PyPiCount --class_def
+poetry run pypicount --[argument] --input-file path/to/file
 ```
 
-Output:
+## Example of Output
+
+Sample run command:
 
 ```python
-The number of class definitions found in the file: 1
+poetry run pypicount --class_with_docstrings --input-file tests/input/sample_file.py
 ```
+
+Sample Output:
+
+```python
+# of functions with docstrings: 1
 
 ## Help and Bug Fixes
 
