@@ -37,3 +37,9 @@ def test_count_classes_without_docstrings():
     """Test case for counting the number of Classes that do not have docstrings."""
     expected_classes_dst = 0
     assert test_pycount.count_functions_without_docstring() == expected_classes_dst
+
+    
+def test_count_function_definitions():
+    """Test case for counting the number of functions."""
+    expected_function_definitions = 2
+    assert test_pycount.count_function_definitions() == expected_function_definitions)
