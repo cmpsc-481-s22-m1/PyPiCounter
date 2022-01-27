@@ -11,7 +11,7 @@ def test_main_class():
     """Test case to see if class argument is correct."""
     class_result = cli_runner.invoke(cli, ["--input-file", "input/sample_file.py", "--class_def"])
     assert class_result.exit_code == 0
-    assert "1" in class_result.stdout
+    assert "2" in class_result.stdout
 
 
 def test_main_imports():
@@ -25,14 +25,14 @@ def test_main_comment():
     """Test case to see if comment argument is correct."""
     comment_result = cli_runner.invoke(cli, ["--input-file", "input/sample_file.py", "--comment"])
     assert comment_result.exit_code == 0
-    assert "7" in comment_result.stdout
+    assert "9" in comment_result.stdout
 
 
 def test_main_function_def():
     """Test case to see if function definition argument is correct."""
     function_def_result = cli_runner.invoke(cli, ["--input-file", "input/sample_file.py", "--function_def"])
     assert function_def_result.exit_code == 0
-    assert "2" in function_def_result.stdout
+    assert "6" in function_def_result.stdout
 
 
 def test_main_function_without_docstrings():
