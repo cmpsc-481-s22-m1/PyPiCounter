@@ -1,7 +1,7 @@
 """Test cases for the command line interface."""
 from typer.testing import CliRunner
 
-from src.command_line_interface import cli
+from command_line_interface import cli
 
 
 cli_runner = CliRunner()
@@ -25,7 +25,7 @@ def test_main_comment():
     """Test case to see if comment argument is correct."""
     comment_result = cli_runner.invoke(cli, ["--input-file", "tests/input/sample_file.py", "--comment"]) # pylint: disable=C0301
     assert comment_result.exit_code == 0
-    assert "9" in comment_result.stdout
+    assert "14" in comment_result.stdout
 
 
 def test_main_function_def():
