@@ -2,16 +2,22 @@
 
 ## Overview
 
-- This project is a tool that, on its own, will provide assistance to computer science 
-professors to assist in grading assignments. This tool will count and output the number 
-of 'common errors' (e.g., Classes without docstrings, functions without docstrings, etc.) 
-as well as the number of common computing structures (e.g., functions, Classes, 
-looping constructs, imports, etc.) all as specified by the user in the command line interface.
+- This project is a tool that, on its own, will provide assistance to
+computer science professors to assist in grading assignments.
+This tool will count and output the number of 'common errors'
+(e.g., Classes without docstrings, functions without docstrings, etc.)
+as well as the number of common computing structures (e.g.,
+functions, Classes, looping constructs, imports, etc.)
+all as specified by the user in the command line interface.
 
-- This project also can serve as a collaborative enhancement to import this tool into 
-Allegheny College's own GatorGrader to create new GatorGrader checks. The program utilizes LibCST, 
-which parses Python code as a CST (Concrete Syntax Tree) that keeps all formatting details (comments,
-white spaces, parentheses, etc.). As a released tool on PiPy, this tool can be imported into 
+- This project also can serve as a collaborative enhancement
+to import this tool into Allegheny College's
+own GatorGrader to create new GatorGrader checks.
+The program utilizes LibCST, which parses Python
+code as a CST (Concrete Syntax Tree)
+that keeps all formatting details (comments,
+white spaces, parentheses, etc.).
+As a released tool on PiPy, this tool can be imported into
 any other automated grading tool as well.
 
 ## Why is the project useful?
@@ -33,6 +39,7 @@ command ```poetry run PyCount --help```
 4. Once you find your chosen arguments, run ```poetry run Pycount --[argument]```
 
 A list of potential arguments includes:
+
 - `class_def`
 - `import_statements`
 - `comment`
@@ -50,7 +57,7 @@ with the following format:
   - Include steps to replicate the bug
   - Expected behavior
   - Screenshots
-  - Desktop OS  
+  - Desktop OS
 
 ## Authors
 
