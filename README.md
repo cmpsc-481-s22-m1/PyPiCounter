@@ -1,4 +1,4 @@
-# Py-Count ReadMe
+# PyPiCount
 
 ## Overview
 
@@ -33,10 +33,12 @@ to identify in the source code (as LibCST will find all matches of this construc
 Users can get started with this project by following the following steps:
 
 1. Clone this repository and `cd` into the project folder
-2. Run the command ```poetry install``` to install the dependencies for this project
+2. Run the command ```poetry install``` to install the dependencies for this project.
 3. To familiarize yourself with the arguments accepted for this project, run the
-command ```poetry run PyCount --help```
-4. Once you find your chosen arguments, run ```poetry run Pycount --[argument]```
+command ```poetry run PyPiCount --help```. This command displays all of the
+different arguments that can be passed. The list of the different arguments
+are listed below.
+4. Once you find your chosen arguments, run ```poetry run PyPicount --[argument]```
 
 A list of potential arguments includes:
 
@@ -46,6 +48,18 @@ A list of potential arguments includes:
 - `function_def`
 - `classes_without_docstrings`
 - `functions_without_docstrings`
+
+## Sample Output
+
+```
+poetry run PyPiCount --class_def
+```
+
+Output:
+
+```
+The number of class definitions found in the file: 1
+```
 
 ## Help and Bug Fixes
 
