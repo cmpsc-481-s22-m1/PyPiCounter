@@ -7,9 +7,10 @@ import libcst as cst
 class PyCount:
     """Class for the python counter."""
 
-    def __init__(self, file):
+    def __init__(self, filename):
         """Declaring the self variable."""
-        self.search = cst.parse_module(open(file).read())  # pylint: disable=R1732,W1514
+        with open(filename, 'a+') as file:
+            self.search = cst.parse_module(file.read())  # pylint: disable=R1732,W1514
 
     def count_class_definitions(self):
         """Counting the class definitions."""
@@ -37,7 +38,7 @@ class PyCount:
         functions_list = m.findall(self.search, m.FunctionDef())
         count = 0
         for find in functions_list:
-            if find.get_docstring() is True:
+            if find.get_docstring() is False:
                 count += 1
                 return count
 
@@ -46,6 +47,6 @@ class PyCount:
         class_definitions = m.findall(self.search, m.ClassDef())
         count = 0
         for finding in class_definitions:
-            if finding.get_docstring() is True:
+            if finding.get_docstring() is False:
                 count += 1
                 return count
