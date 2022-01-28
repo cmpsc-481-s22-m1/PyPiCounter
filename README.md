@@ -20,7 +20,7 @@ white spaces, parentheses, etc.).
 As a released tool on PiPy, this tool can be imported into
 any other automated grading tool as well.
 
-## Usefullness of Project
+## Usefulness of Project
 
 - Within LibCST, it has many nodes to "match" modules, expressions, and
 statements which allowed us as programmers to complete our user stories in a
