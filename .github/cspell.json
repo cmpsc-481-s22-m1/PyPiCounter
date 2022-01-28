@@ -14,8 +14,20 @@
         "pyproject",
         "virtualenvs",
         "git",
+        "docstrings",
+        "pypicount",
+        "caldwella",
+        "solisa",
+        "rachaelharris",
+        "guzmanr",
         "gitignore",
-        "github"
+        "github",
+        "docstrings",
+        "guzmanr",
+        "caldwella",
+        "rachaelharris",
+        "solisa",
+        "Picount"
     ],
     "ignorePaths": [
         ".github/**",

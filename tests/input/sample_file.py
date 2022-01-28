@@ -15,7 +15,7 @@ class TestClass:
         """Test saying for the test class."""
         print("This is a test case.")
 
-    def sample_function(self):
+    def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
 
@@ -32,18 +32,18 @@ print(TestClass.sample_function)
 # Output: "This is a person class"
 print(TestClass.__doc__)
 
-class AnotherClass:
-    age_again = 10
-    def test_greeting_two(self):
+class AnotherClass: # pylint: disable=C0115
+    def test_greeting_two(self): # pylint: disable=C0116,R0201
         print("Hello, how are you?")
 
-    def test_saying_two(self):
+    def test_saying_two(self): # pylint: disable=C0116,R0201
+        age_again = 10
         if age_again == 10:
             print("What's the big idea?")
         else:
             print("What's up?")
 
-    def test_sample_function(self):
+    def test_sample_function(self): # pylint: disable=C0116,R0201
         """Test sample function."""
         print("Found my docstring!")
 
@@ -52,7 +52,7 @@ print(AnotherClass.test_greeting_two)
 print()
 print(AnotherClass.test_saying_two)
 print()
-print(AnotherClass.sample_function_two)
+print(AnotherClass.test_sample_function)
 
 # Output: "This is a person class"
 print(AnotherClass.__doc__)
