@@ -42,7 +42,8 @@ def test_main_function_def():
 def test_main_function_without_docstrings():
     """Test case to see if function without docstrings argument is correct."""
     func_wo_docstr_result = cli_runner.invoke(cli, ["--input-file", \
-                                                    "tests/input/sample_file.py", "--function_without_docstrings"])
+                                                    "tests/input/sample_file.py", \
+                                                    "--function_without_docstrings"])
     assert func_wo_docstr_result.exit_code == 0
     assert "3" in func_wo_docstr_result.stdout
 
@@ -50,7 +51,8 @@ def test_main_function_without_docstrings():
 def test_main_function_with_docstrings():
     """Test case to see if function without docstrings argument is correct."""
     func_w_docstr_result = cli_runner.invoke(cli, ["--input-file", \
-                                                   "tests/input/sample_file.py", "--function_with_docstrings"])
+                                                   "tests/input/sample_file.py", \
+                                                   "--function_with_docstrings"])
     assert func_w_docstr_result.exit_code == 0
     assert "3" in func_w_docstr_result.stdout
 
@@ -58,14 +60,16 @@ def test_main_function_with_docstrings():
 def test_main_class_without_docstrings():
     """Test case to see if class without docstrings argument is correct."""
     class_wo_docstr_result = cli_runner.invoke(cli, ["--input-file", \
-                                                     "tests/input/sample_file.py", "--class_without_docstrings"])
+                                                     "tests/input/sample_file.py", \
+                                                     "--class_without_docstrings"])
     assert class_wo_docstr_result.exit_code == 0
     assert "1" in class_wo_docstr_result.stdout
 
 def test_main_class_with_docstrings():
     """Test case to see if class with docstrings argument is correct."""
     class_w_docstr_result = cli_runner.invoke(cli, ["--input-file", \
-                                                    "tests/input/sample_file.py", "--class_with_docstrings"])
+                                                    "tests/input/sample_file.py", \
+                                                    "--class_with_docstrings"])
     assert class_w_docstr_result.exit_code == 0
     assert "1" in class_w_docstr_result.stdout
 
