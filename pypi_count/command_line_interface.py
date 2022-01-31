@@ -6,7 +6,7 @@ from rich.console import Console
 
 import typer
 
-from PyPiCount.py_counter import PyCount
+from pypy_count.py_counter import PyCount
 
 cli = typer.Typer()
 
