@@ -3,7 +3,7 @@
 from pypi_count.py_counter import PyCount
 
 
-FILE = "tests/input/sample_file.py"
+FILE = "input/sample_file.py"
 test_pycount = PyCount(FILE)
 
 def test_count_class_defintions():
