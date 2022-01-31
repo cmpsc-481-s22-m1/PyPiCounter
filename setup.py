@@ -14,8 +14,8 @@ setup(
     description = ("A python program to count the number of instances of different specifications."),
     license = "MIT",
     keywords = "python counter",
-    url = "https://github.com/cmpsc-481-s22-m1/PyCount",
-    packages=['PyCount', 'tests'],
+    url = "https://github.com/cmpsc-481-s22-m1/PyPiCount",
+    packages=['PyPiCount', 'tests'],
     long_description=read('README'),
     classifiers=[
         "Development Status :: 3 - Alpha",

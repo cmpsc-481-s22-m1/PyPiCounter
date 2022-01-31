@@ -1,6 +1,6 @@
 """Test cases for py_counter method."""
 
-from src.py_counter import PyCount
+from PyPiCount.py_counter import PyCount
 
 
 FILE = "tests/input/sample_file.py"
