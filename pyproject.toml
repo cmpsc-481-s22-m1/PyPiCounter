@@ -5,12 +5,12 @@ description = "A counting program used for different Pythong packages and module
 authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
 license = "MIT"
 packages = [
-    { include = "py_counter.py", from="PyPiCount" },
-    { include = "PyPiCount/py_counter.py"},
+    { include = "py_counter.py", from="pypi_count" },
+    { include = "pypi_count/py_counter.py"},
 ]
 
 [tool.poetry.scripts]
-pypicount = "PyPiCount.command_line_interface:cli"
+pypicount = "pypi_count.command_line_interface:cli"
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
@@ -26,8 +26,8 @@ pylint = "^2.12.2"
 black = "^21.12b0"
 
 [tool.taskipy.tasks]
-test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=PyPiCount tests/"
-lint = "pylint tests/ PyPiCount/"
+test = "pytest --cov-report term-missing --cov-fail-under=70  --cov-branch --cov=pypi_count tests/"
+lint = "pylint tests/ pypi_count/"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
