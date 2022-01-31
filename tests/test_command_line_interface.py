@@ -1,7 +1,11 @@
 """Test cases for the command line interface."""
 from typer.testing import CliRunner
 
+<<<<<<< HEAD
 from src.command_line_interface import cli
+=======
+from pypi_count.command_line_interface import cli
+>>>>>>> Rename
 
 
 cli_runner = CliRunner()
