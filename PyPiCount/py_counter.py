@@ -9,8 +9,8 @@ class PyCount:
 
     def __init__(self, filename):
         """Declaring the self variable."""
-        with open(filename, 'r') as file: # pylint: disable=W1514
-            self.search = cst.parse_module(file.read())  # pylint: disable=R1732,W1514
+        with open(filename, 'r', encoding="utf8") as file:
+            self.search = cst.parse_module(file.read())
 
     def count_class_definitions(self):
         """Counting the class definitions."""
