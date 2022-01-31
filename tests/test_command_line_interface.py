@@ -1,7 +1,7 @@
 """Test cases for the command line interface."""
 from typer.testing import CliRunner
 
-from command_line_interface import cli
+from src.command_line_interface import cli
 
 
 cli_runner = CliRunner()
