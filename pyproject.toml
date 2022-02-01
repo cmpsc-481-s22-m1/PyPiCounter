@@ -3,7 +3,14 @@ name = "PyPiCount"
 version = "0.1.0"
 description = "A counting program used for different Python packages and modules."
 authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
+keywords = ["python", "counting"]
+readme = "README.md"
 license = "MIT"
+homepage = "https://github.com/cmpsc-481-s22-m1/PyPiCount"
+repository = "https://github.com/cmpsc-481-s22-m1/PyPiCount"
+include = [
+    "LICENSE",
+]
 packages = [
     { include = "py_counter.py", from="pypi_count" },
     { include = "pypi_count/py_counter.py"},
