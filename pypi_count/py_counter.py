@@ -83,3 +83,12 @@ class PyPiCount:
                 total.append(count)
                 count += 1
         return count
+
+    def count_function_parameters(self):
+        """Counting the parameters within a function."""
+        functions = m.findall(self.search, m.FunctionDef())
+        param_result = 0
+        for func in functions:
+            if func.name.value == self:
+                param_result = len(func.params.params)
+        return param_result

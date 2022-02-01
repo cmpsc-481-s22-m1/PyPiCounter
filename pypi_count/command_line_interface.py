@@ -25,6 +25,7 @@ def main(  # pylint: disable=R0913
     function_with_docstrings: bool = typer.Option(False, "--function_with_docstrings"),
     class_with_docstrings: bool = typer.Option(False, "--class_with_docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
+    find_parameters: bool = typer.Option(False, "--find_parameters"),
 ):
     """Main method to display the different options."""
     pycount = PyPiCount(input_file)
@@ -54,3 +55,6 @@ def main(  # pylint: disable=R0913
 
     if if_statements:
         console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
+
+    if find_parameters:
+        console.print("\n# of parameters in functions: " + str(pycount.count_function_parameters())) # pylint: disable=C0301

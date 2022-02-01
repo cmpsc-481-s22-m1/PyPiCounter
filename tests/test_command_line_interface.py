@@ -78,3 +78,11 @@ def test_if_statements():
                                        "tests/input/sample_file.py", "--if_statements"])
     assert if_state.exit_code == 0
     assert "1" in if_state.stdout
+
+def test_main_parameters():
+    """Test case to see if function finds the parameters."""
+    find_parameter_result = cli_runner.invoke(cli, ["--input-file", \
+                                                    "tests/input/sample_file.py", \
+                                                    "--find_parameters"])
+    assert find_parameter_result.exit_code == 0
+    assert "0" in find_parameter_result.stdout
