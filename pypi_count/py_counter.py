@@ -4,7 +4,7 @@ import libcst.matchers as m
 import libcst as cst
 
 
-class PyCount:
+class PyPiCount:
     """Class for the python counter."""
 
     def __init__(self, filename):

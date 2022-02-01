@@ -27,7 +27,7 @@ def test_main_comment():
     comment_result = cli_runner.invoke(cli, ["--input-file", \
                                              "input/sample_file.py", "--comment"])
     assert comment_result.exit_code == 0
-    assert "9" in comment_result.stdout
+    assert "14" in comment_result.stdout
 
 
 def test_main_function_def():

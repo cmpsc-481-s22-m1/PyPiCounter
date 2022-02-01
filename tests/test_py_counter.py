@@ -1,10 +1,10 @@
 """Test cases for py_counter method."""
 
-from pypi_count.py_counter import PyCount
+from pypi_count.py_counter import PyPiCount
 
 
 FILE = "input/sample_file.py"
-test_pycount = PyCount(FILE)
+test_pycount = PyPiCount(FILE)
 
 def test_count_class_defintions():
     """Test case for counting the class definitions."""
@@ -14,7 +14,7 @@ def test_count_class_defintions():
 
 def test_count_comments():
     """Test case for counting the class definitions."""
-    expected_comments = 9
+    expected_comments = 14
     assert test_pycount.count_comments() == expected_comments
 
 

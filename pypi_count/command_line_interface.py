@@ -6,7 +6,7 @@ from rich.console import Console
 
 import typer
 
-from pypi_count.py_counter import PyCount
+from pypi_count.py_counter import PyPiCount
 
 cli = typer.Typer()
 
@@ -27,7 +27,7 @@ def main(  # pylint: disable=R0913
     class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
 ):
     """Main method to display the different options."""
-    pycount = PyCount(input_file)
+    pycount = PyPiCount(input_file)
     if class_def:
         console.print("\n# of class definitions: " + str(pycount.count_class_definitions()))
 
