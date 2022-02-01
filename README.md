@@ -1,4 +1,4 @@
-# PyPiCount
+# PyPiCounter
 
 ## Overview
 
@@ -59,7 +59,7 @@ are listed below:
 
   ```
 
-These are the different types of arguments that PyPiCount will accept in this release.
+These are the different types of arguments that PyPiCounter will accept in this release.
 
 Once you find your chosen arguments, run the following:
 

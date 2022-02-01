@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "PyPiCount"
+name = "PyPiCounter"
 version = "0.1.0"
 description = "A counting program used for different Python packages and modules."
 authors = ["Adriana Solis, Alexis Caldwell, Rachael Harris, Ramon Guzman, Ryan Hilty"]
