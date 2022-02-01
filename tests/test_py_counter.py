@@ -52,4 +52,5 @@ def test_count_classes_with_docstrings():
 def test_find_parameters():
     """Test case for counting the parameters"""
     expected_parameters = 1
-    assert test.pycount.find_parameters() == expected_parameters
+    assert test_pycount.find_parameters() == expected_parameters
+    
