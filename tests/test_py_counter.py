@@ -1,10 +1,10 @@
 """Test cases for py_counter method."""
 
-from pypi_count.py_counter import PyCount
+from pypi_count.py_counter import PyPiCount
 
 
-FILE = "input/sample_file.py"
-test_pycount = PyCount(FILE)
+FILE = "tests/input/sample_file.py"
+test_pycount = PyPiCount(FILE)
 
 def test_count_class_defintions():
     """Test case for counting the class definitions."""
