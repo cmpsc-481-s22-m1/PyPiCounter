@@ -38,6 +38,12 @@ class PyPiCount:
         return len(func_definitions)
 
 
+    def count_assignment_statement(self):
+        """Counting the assignment statement."""
+        assignment_statement = m.findall(self.search, m.Assign())
+        return len(assignment_statement)
+
+
     def count_functions_without_docstring(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
@@ -83,9 +89,3 @@ class PyPiCount:
                 total.append(count)
                 count += 1
         return count
-
-
-    def count_assignment_statement(self):
-        """Counting the assignment statement."""
-        assignment_statement = m.findall(self.search, m.Assign())
-        return len(assignment_statement)
