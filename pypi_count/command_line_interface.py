@@ -55,6 +55,6 @@ def main(  # pylint: disable=R0913
 
     if if_statements:
         console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
-        
+
     if find_parameters:
         console.print("\n# of parameters in functions: " + str(pycount.count_function_parameters())) # pylint: disable=C0301

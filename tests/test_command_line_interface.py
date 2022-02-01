@@ -81,6 +81,8 @@ def test_if_statements():
 
 def test_main_parameters():
     """Test case to see if function finds the parameters."""
-    find_parameter_result = cli_runner.invoke(cli, ["--input-file", "tests/input/sample_file.py", "--find_parameters"])  # pylint: disable=C0301
+    find_parameter_result = cli_runner.invoke(cli, ["--input-file", \
+                                                    "tests/input/sample_file.py", \
+                                                    "--find_parameters"])
     assert find_parameter_result.exit_code == 0
     assert "1" in find_parameter_result.stdout

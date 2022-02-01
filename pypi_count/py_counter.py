@@ -89,4 +89,5 @@ class PyPiCount:
         functions = m.findall(self.search, m.FunctionDef())
         for func in functions:
             if func.name.value == self:
-                return len(func.params.params)
+                param_result = len(func.params.params)
+        return param_result
