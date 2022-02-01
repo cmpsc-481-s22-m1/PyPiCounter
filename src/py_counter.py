@@ -83,3 +83,10 @@ class PyCount:
                 total.append(count)
                 count += 1
         return count
+    
+    def count_function_parameters(self):
+        """Counting the parameters within a function."""
+        functions = m.findall(self.search, m.FunctionDef())
+        for func in functions:
+            if func.name.value == self:
+                return len(func.params.params)

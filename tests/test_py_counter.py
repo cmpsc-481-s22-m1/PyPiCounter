@@ -48,3 +48,8 @@ def test_count_classes_with_docstrings():
     """Test case for counting the number of Classes that do not have docstrings."""
     expected_classes_dst_2 = 1
     assert test_pycount.count_classes_with_docstring() == expected_classes_dst_2
+    
+def test_find_parameters():
+    """Test case for counting the parameters"""
+    expected_parameters = 1
+    assert test.pycount.find_parameters() == expected_parameters
