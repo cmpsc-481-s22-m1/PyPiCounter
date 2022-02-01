@@ -85,4 +85,4 @@ def test_main_parameters():
                                                     "tests/input/sample_file.py", \
                                                     "--find_parameters"])
     assert find_parameter_result.exit_code == 0
-    assert "1" in find_parameter_result.stdout
+    assert "0" in find_parameter_result.stdout
