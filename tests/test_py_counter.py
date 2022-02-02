@@ -19,19 +19,19 @@ def test_count_comments():
 
 def test_count_while():
     """Test case for counting the while loops."""
-    expected_imports = 0
-    assert test_pycount.count_import_statements() == expected_imports
+    expected_while = 0
+    assert test_pycount.count_while() == expected_while
 
 def test_import_statements():
-    """Test case for counting the for loops."""
-    expected_imports = 0
-    assert test_pycount.count_import_statements() == expected_imports
-    
-def test_import_statements():
-    """Test case for counting the import statements."""
+    """Test case for counting import statements."""
     expected_imports = 2
     assert test_pycount.count_import_statements() == expected_imports
-    
+
+def test_count_for():
+    """Test case for counting the for loops."""
+    expected_for = 0
+    assert test_pycount.count_for() == expected_for
+
 def test_count_if_statements():
     """Test case for counting the if statements."""
     expected_if = 1
