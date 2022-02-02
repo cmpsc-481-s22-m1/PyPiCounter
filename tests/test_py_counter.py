@@ -53,3 +53,8 @@ def test_find_parameters():
     """Test case for counting the parameters"""
     expected_parameters = 0
     assert test_pycount.count_function_parameters() == expected_parameters
+
+def test_count_assignment_statements():
+    """Test case for counting assignement statements."""
+    expected_assignment_statements = 2
+    assert test_pycount.count_assignment_statements() == expected_assignment_statements
