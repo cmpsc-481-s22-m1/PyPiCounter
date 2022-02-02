@@ -25,6 +25,8 @@ def main(  # pylint: disable=R0913
     function_with_docstrings: bool = typer.Option(False, "--function_with_docstrings"),
     class_with_docstrings: bool = typer.Option(False, "--class_with_docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
+    assignment_statements: bool = typer.Option(False, "--assignment_statements"),
+
 ):
     """Main method to display the different options."""
     pycount = PyPiCount(input_file)
@@ -54,3 +56,6 @@ def main(  # pylint: disable=R0913
 
     if if_statements:
         console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
+
+    if assignment_statements:
+        console.print("\n of assignment statements: " + str(pycount.count_assignment_statements())) # pylint: disable=c0301

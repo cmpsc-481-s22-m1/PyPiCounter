@@ -38,7 +38,7 @@ class PyPiCount:
         return len(func_definitions)
 
 
-    def count_assignment_statement(self):
+    def count_assignment_statements(self):
         """Counting the assignment statement."""
         assignment_statement = m.findall(self.search, m.Assign())
         return len(assignment_statement)
