@@ -87,10 +87,10 @@ def test_main_parameters():
     assert find_parameter_result.exit_code == 0
     assert "0" in find_parameter_result.stdout
 
-def test_count_augmented_assignment_statements():
+def test_count_assignment_statements():
     """Test case to see if 'augmented assignment statements' argument is correct."""
     if_state = cli_runner.invoke(cli, ["--input-file", \
-                                       "tests/input/sample_file.py", "--augmented_assignment_statements"])
+                                       "tests/input/sample_file.py", \
+                                       "--augmented_assignment_statements"])
     assert if_state.exit_code == 0
     assert "2" in if_state.stdout
-    
