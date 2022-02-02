@@ -59,3 +59,4 @@ def main(  # pylint: disable=R0913
 
     if assignment_statements:
         console.print("\n of assignment statements: " + str(pycount.count_assignment_statements())) # pylint: disable=c0301
+        
