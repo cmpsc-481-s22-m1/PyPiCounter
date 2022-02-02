@@ -30,7 +30,14 @@ class PyPiCount:
     def count_if_statements(self):
         """Counting the if statements."""
         return len(m.findall(self.search, m.If()))
-
+    
+    def count_while(self):
+        """Counting the while loops."""
+        return len(m.findall(self.search, m.While()))
+    
+    def count_for(self):
+        """Counting the for loops."""
+        return len(m.findall(self.search, m.For()))
 
     def count_function_definitions(self):
         """Counting the function definitions."""
