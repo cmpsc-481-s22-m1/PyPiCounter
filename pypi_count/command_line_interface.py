@@ -25,7 +25,7 @@ def main(  # pylint: disable=R0913,R0912
     function_with_docstrings: bool = typer.Option(False, "--function-with-docstrings"),
     class_with_docstrings: bool = typer.Option(False, "--class-with-docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
-    function_parameters: bool = typer.Option(..., "--function-parameters"),
+    function_parameters: str = typer.Option(None),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
 
 ):
@@ -68,7 +68,7 @@ def main(  # pylint: disable=R0913,R0912
 
         if function_parameters:
             console.print("\n# of parameters in functions: " + \
-            str(pycount.count_function_parameters()))
+            str(pycount.count_function_parameters(function_parameters)))
 
         if assignment_statements:
             console.print("\n of assignment statements: " + \

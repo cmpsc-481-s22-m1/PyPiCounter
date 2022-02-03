@@ -57,10 +57,10 @@ def test_count_classes_with_docstrings():
     expected_classes_dst_2 = 1
     assert test_pycount.count_classes_with_docstring() == expected_classes_dst_2
 
-def test_find_parameters():
+def test_function_parameters():
     """Test case for counting the parameters"""
     expected_parameters = 1
-    assert test_pycount.count_function_parameters() == expected_parameters
+    assert test_pycount.count_function_parameters("test_saying_two") == expected_parameters
 
 def test_count_assignment_statements():
     """Test case for counting assignement statements."""
