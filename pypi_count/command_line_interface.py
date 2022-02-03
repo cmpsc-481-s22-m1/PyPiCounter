@@ -44,22 +44,29 @@ def main(  # pylint: disable=R0913
         console.print("\n# of function definitions: " + str(pycount.count_function_definitions()))
 
     if function_without_docstrings:
-        console.print("\n# of functions w/o docstrings: " + str(pycount.count_functions_without_docstring())) # pylint: disable=C0301
+        console.print("\n# of functions w/o docstrings: " + \
+        str(pycount.count_functions_without_docstring()))
 
     if function_with_docstrings:
-        console.print("\n# of functions with docstrings: " + str(pycount.count_functions_with_docstring())) # pylint: disable=C0301
+        console.print("\n# of functions with docstrings: " + \
+        str(pycount.count_functions_with_docstring()))
 
     if class_without_docstrings:
-        console.print("\n# of classes w/o docstrings: " + str(pycount.count_classes_without_docstring())) # pylint: disable=C0301
+        console.print("\n# of classes w/o docstrings: " + \
+        str(pycount.count_classes_without_docstring()))
 
     if class_with_docstrings:
-        console.print("\n# of functions with docstrings: " + str(pycount.count_classes_with_docstring())) # pylint: disable=C0301
+        console.print("\n# of functions with docstrings: " + \
+        str(pycount.count_classes_with_docstring()))
 
     if if_statements:
-        console.print("\n# of if statements: " + str(pycount.count_if_statements())) # pylint: disable=C0301
+        console.print("\n# of if statements: " + \
+        str(pycount.count_if_statements()))
 
     if find_parameters:
-        console.print("\n# of parameters in functions: " + str(pycount.count_function_parameters())) # pylint: disable=C0301
+        console.print("\n# of parameters in functions: " + \
+        str(pycount.count_function_parameters()))
 
     if assignment_statements:
-        console.print("\n of assignment statements: " + str(pycount.count_assignment_statements())) # pylint: disable=c0301
+        console.print("\n of assignment statements: " + \
+        str(pycount.count_assignment_statements()))
