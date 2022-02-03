@@ -4,13 +4,13 @@ import libcst.matchers as m
 import libcst as cst
 
 
-class PyCount:
+class PyPiCount:
     """Class for the python counter."""
 
     def __init__(self, filename):
         """Declaring the self variable."""
-        with open(filename, 'r') as file: # pylint: disable=W1514
-            self.search = cst.parse_module(file.read())  # pylint: disable=R1732,W1514
+        with open(filename, 'r', encoding="utf8") as file:
+            self.search = cst.parse_module(file.read())
 
     def count_class_definitions(self):
         """Counting the class definitions."""
@@ -31,6 +31,13 @@ class PyCount:
         """Counting the if statements."""
         return len(m.findall(self.search, m.If()))
 
+    def count_while_loops(self):
+        """Counting the while loops."""
+        return len(m.findall(self.search, m.While()))
+
+    def count_for_loops(self):
+        """Counting the for loops."""
+        return len(m.findall(self.search, m.For()))
 
     def count_function_definitions(self):
         """Counting the function definitions."""
@@ -38,7 +45,7 @@ class PyCount:
         return len(func_definitions)
 
 
-    def count_functions_without_docstring(self):  # pylint: disable=R1710
+    def count_functions_without_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
         count = 0
@@ -50,7 +57,7 @@ class PyCount:
         return count
 
 
-    def count_functions_with_docstring(self):  # pylint: disable=R1710
+    def count_functions_with_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions with docstrings."""
         function_definitions2 = m.findall(self.search, m.FunctionDef())
         count = 0
@@ -61,7 +68,7 @@ class PyCount:
                 total.append(count)
         return count
 
-    def count_classes_without_docstring(self):  # pylint: disable=R1710
+    def count_classes_without_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions = m.findall(self.search, m.ClassDef())
         count = 0
@@ -73,7 +80,7 @@ class PyCount:
         return count
 
 
-    def count_classes_with_docstring(self):  # pylint: disable=R1710
+    def count_classes_with_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions2 = m.findall(self.search, m.ClassDef())
         count = 0
@@ -83,3 +90,18 @@ class PyCount:
                 total.append(count)
                 count += 1
         return count
+
+    def count_function_parameters(self, function_name):
+        """Counting the parameters within a function."""
+        functions = m.findall(self.search, m.FunctionDef())
+        param_result = 0
+        for func in functions:
+            if func.name.value == function_name:
+                param_result = len(func.params.params)
+        return param_result
+
+
+    def count_assignment_statements(self):
+        """Counting the assignment statement."""
+        assignment_statement = m.findall(self.search, m.Assign())
+        return len(assignment_statement)
