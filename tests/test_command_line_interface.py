@@ -35,7 +35,7 @@ def test_main_comment():
     """Test case to see if comment argument is correct."""
     comment_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--comments"])
     assert comment_result.exit_code == 0
-    assert "15" in comment_result.stdout
+    assert "17" in comment_result.stdout
 
 
 def test_main_function_def():
