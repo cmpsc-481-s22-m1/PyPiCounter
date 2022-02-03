@@ -27,6 +27,8 @@ def main(  # pylint: disable=R0913,R0912
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
     find_parameters: bool = typer.Option(False, "--find-parameters"),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
+    while_loops: bool = typer.Option(False, "--while-loops"),
+    for_loops: bool = typer.Option(False, "--for-loops"),
 
 ):
     """Main method to display the different options."""
@@ -73,5 +75,13 @@ def main(  # pylint: disable=R0913,R0912
         if assignment_statements:
             console.print("\n of assignment statements: " + \
             str(pycount.count_assignment_statements()))
+            
+        if while_loops:
+            console.print("\n of assignment statements: " + \
+            str(pycount.count_while()))
+            
+        if for_loops:
+            console.print("\n of assignment statements: " + \
+            str(pycount.count_for()))
     else:
         console.print("Please input a valid file!")
