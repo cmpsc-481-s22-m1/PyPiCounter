@@ -25,7 +25,7 @@ def main(  # pylint: disable=R0913,R0912
     function_with_docstrings: bool = typer.Option(False, "--function-with-docstrings"),
     class_with_docstrings: bool = typer.Option(False, "--class-with-docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
-    find_parameters: bool = typer.Option(False, "--find-parameters"),
+    function_parameters: str = typer.Option(None),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
     while_loops: bool = typer.Option(False, "--while-loops"),
     for_loops: bool = typer.Option(False, "--for-loops"),
@@ -50,27 +50,27 @@ def main(  # pylint: disable=R0913,R0912
 
         if function_without_docstrings:
             console.print("\n# of functions w/o docstrings: " + \
-            str(pycount.count_functions_without_docstring()))
+            str(pycount.count_functions_without_docstrings()))
 
         if function_with_docstrings:
             console.print("\n# of functions with docstrings: " + \
-            str(pycount.count_functions_with_docstring()))
+            str(pycount.count_functions_with_docstrings()))
 
         if class_without_docstrings:
             console.print("\n# of classes w/o docstrings: " + \
-            str(pycount.count_classes_without_docstring()))
+            str(pycount.count_classes_without_docstrings()))
 
         if class_with_docstrings:
             console.print("\n# of functions with docstrings: " + \
-            str(pycount.count_classes_with_docstring()))
+            str(pycount.count_classes_with_docstrings()))
 
         if if_statements:
             console.print("\n# of if statements: " + \
             str(pycount.count_if_statements()))
 
-        if find_parameters:
+        if function_parameters:
             console.print("\n# of parameters in functions: " + \
-            str(pycount.count_function_parameters()))
+            str(pycount.count_function_parameters(function_parameters)))
 
         if assignment_statements:
             console.print("\n of assignment statements: " + \
@@ -78,10 +78,10 @@ def main(  # pylint: disable=R0913,R0912
 
         if while_loops:
             console.print("\n of assignment statements: " + \
-            str(pycount.count_while()))
+            str(pycount.count_while_loops()))
 
         if for_loops:
             console.print("\n of assignment statements: " + \
-            str(pycount.count_for()))
+            str(pycount.count_for_loops()))
     else:
         console.print("Please input a valid file!")

@@ -12,13 +12,13 @@ def test_main_class():
     assert class_result.exit_code == 0
     assert "2" in class_result.stdout
 
-def test_while():
+def test_while_loops():
     """Test case to see if class argument is correct."""
     while_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--while-loops"])
     assert while_result.exit_code == 0
     assert "0" in while_result.stdout
 
-def test_for():
+def test_for_loops():
     """Test case to see if class argument is correct."""
     for_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
     assert for_result.exit_code == 0
@@ -82,12 +82,12 @@ def test_if_statements():
     assert if_state.exit_code == 0
     assert "2" in if_state.stdout
 
-def test_main_parameters():
+def test_function_parameters():
     """Test case to see if function finds the parameters."""
-    find_parameter_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
-                                                    "--find-parameters"])
-    assert find_parameter_result.exit_code == 0
-    assert "0" in find_parameter_result.stdout
+    function_parameter_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
+                                                    "--function-parameters", "test_saying_two"])
+    assert function_parameter_result.exit_code == 0
+    assert "1" in function_parameter_result.stdout
 
 def test_count_assignment_statements():
     """Test case to see if 'assignment statements' argument is correct."""

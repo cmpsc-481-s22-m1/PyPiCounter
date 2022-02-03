@@ -31,11 +31,11 @@ class PyPiCount:
         """Counting the if statements."""
         return len(m.findall(self.search, m.If()))
 
-    def count_while(self):
+    def count_while_loops(self):
         """Counting the while loops."""
         return len(m.findall(self.search, m.While()))
 
-    def count_for(self):
+    def count_for_loops(self):
         """Counting the for loops."""
         return len(m.findall(self.search, m.For()))
 
@@ -45,7 +45,7 @@ class PyPiCount:
         return len(func_definitions)
 
 
-    def count_functions_without_docstring(self):  # pylint: disable=R1710
+    def count_functions_without_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
         count = 0
@@ -57,7 +57,7 @@ class PyPiCount:
         return count
 
 
-    def count_functions_with_docstring(self):  # pylint: disable=R1710
+    def count_functions_with_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions with docstrings."""
         function_definitions2 = m.findall(self.search, m.FunctionDef())
         count = 0
@@ -68,7 +68,7 @@ class PyPiCount:
                 total.append(count)
         return count
 
-    def count_classes_without_docstring(self):  # pylint: disable=R1710
+    def count_classes_without_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions = m.findall(self.search, m.ClassDef())
         count = 0
@@ -80,7 +80,7 @@ class PyPiCount:
         return count
 
 
-    def count_classes_with_docstring(self):  # pylint: disable=R1710
+    def count_classes_with_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions2 = m.findall(self.search, m.ClassDef())
         count = 0
@@ -91,12 +91,12 @@ class PyPiCount:
                 count += 1
         return count
 
-    def count_function_parameters(self):
+    def count_function_parameters(self, function_name):
         """Counting the parameters within a function."""
         functions = m.findall(self.search, m.FunctionDef())
         param_result = 0
         for func in functions:
-            if func.name.value == self:
+            if func.name.value == function_name:
                 param_result = len(func.params.params)
         return param_result
 
