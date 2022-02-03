@@ -45,7 +45,7 @@ class PyPiCount:
         return len(func_definitions)
 
 
-    def count_functions_without_docstring(self):  # pylint: disable=R1710
+    def count_functions_without_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions without docstrings."""
         functions_list = m.findall(self.search, m.FunctionDef())
         count = 0

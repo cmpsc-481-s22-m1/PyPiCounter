@@ -48,19 +48,19 @@ def main(  # pylint: disable=R0913,R0912
 
         if function_without_docstrings:
             console.print("\n# of functions w/o docstrings: " + \
-            str(pycount.count_functions_without_docstring()))
+            str(pycount.count_functions_without_docstrings()))
 
         if function_with_docstrings:
             console.print("\n# of functions with docstrings: " + \
-            str(pycount.count_functions_with_docstring()))
+            str(pycount.count_functions_with_docstrings()))
 
         if class_without_docstrings:
             console.print("\n# of classes w/o docstrings: " + \
-            str(pycount.count_classes_without_docstring()))
+            str(pycount.count_classes_without_docstrings()))
 
         if class_with_docstrings:
             console.print("\n# of functions with docstrings: " + \
-            str(pycount.count_classes_with_docstring()))
+            str(pycount.count_classes_with_docstrings()))
 
         if if_statements:
             console.print("\n# of if statements: " + \
