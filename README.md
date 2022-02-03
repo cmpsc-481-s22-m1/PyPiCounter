@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
-![githhub issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
+![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
 
 ## Table of Contents
 
