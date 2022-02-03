@@ -94,4 +94,4 @@ def test_count_assignment_statements():
     if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                        "--assignment-statements"])
     assert if_state.exit_code == 0
-    assert "2" in if_state.stdout
+    assert "3" in if_state.stdout
