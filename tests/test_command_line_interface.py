@@ -46,6 +46,7 @@ def test_main_function_def():
     assert "7" in function_def_result.stdout
 
 
+
 def test_main_function_without_docstrings():
     """Test case to see if function without docstrings argument is correct."""
     func_wo_docstr_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
@@ -59,7 +60,7 @@ def test_main_function_with_docstrings():
     func_w_docstr_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                                    "--function-with-docstrings"])
     assert func_w_docstr_result.exit_code == 0
-    assert "3" in func_w_docstr_result.stdout
+    assert "4" in func_w_docstr_result.stdout
 
 
 def test_main_class_without_docstrings():
@@ -95,3 +96,4 @@ def test_count_assignment_statements():
                                        "--assignment-statements"])
     assert if_state.exit_code == 0
     assert "3" in if_state.stdout
+
