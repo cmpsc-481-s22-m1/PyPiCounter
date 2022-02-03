@@ -22,7 +22,6 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-
 # Output: 10
 print(TestClass.real_age)
 
@@ -39,6 +38,7 @@ print(f"A sample name: {testing.name}")
 
 # Output: "This is a person class"
 print(TestClass.__doc__)
+
 
 class AnotherClass: # pylint: disable=C0115
     def __init__(self, name, age, bio):
@@ -59,6 +59,13 @@ class AnotherClass: # pylint: disable=C0115
     def test_sample_function(self): # pylint: disable=C0116,R0201
         """Test sample function."""
         print("Found my docstring!")
+
+    def test_sample_for(self): # pylint: disable=C0116,R0201
+        fruits = ["apple", "banana", "cherry"] # Sample for loop
+        for x in fruits:    # pylint: disable=R0201,C0103
+            if x == "banana":
+                break
+            print(x)
 
 # Output: <function Person.greet>
 print(AnotherClass.test_greeting_two)

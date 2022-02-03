@@ -11,10 +11,9 @@ def test_count_class_defintions():
     expected_class = 2
     assert test_pycount.count_class_definitions() == expected_class
 
-
 def test_count_comments():
     """Test case for counting the class definitions."""
-    expected_comments = 14
+    expected_comments = 17
     assert test_pycount.count_comments() == expected_comments
 
 def test_count_while():
@@ -29,17 +28,17 @@ def test_import_statements():
 
 def test_count_for():
     """Test case for counting the for loops."""
-    expected_for = 0
+    expected_for = 1
     assert test_pycount.count_for() == expected_for
 
 def test_count_if_statements():
     """Test case for counting the if statements."""
-    expected_if = 1
+    expected_if = 2
     assert test_pycount.count_if_statements() == expected_if
 
 def test_count_functions_without_docstrings():
     """Test case for counting the number of functions that do not have docstrings."""
-    expected_function_dst = 4
+    expected_function_dst = 5
     assert test_pycount.count_functions_without_docstring() == expected_function_dst
 
 def test_count_functions_with_docstrings():
@@ -62,7 +61,6 @@ def test_find_parameters():
     expected_parameters = 0
     assert test_pycount.count_function_parameters() == expected_parameters
 
-def test_count_assignment_statements():
-    """Test case for counting assignement statements."""
-    expected_assignment_statements = 9
+def test_count_assignment_statements(): #pylint: disable=C0116
+    expected_assignment_statements = 10
     assert test_pycount.count_assignment_statements() == expected_assignment_statements

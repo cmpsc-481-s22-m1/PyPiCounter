@@ -12,6 +12,17 @@ def test_main_class():
     assert class_result.exit_code == 0
     assert "2" in class_result.stdout
 
+def test_while():
+    """Test case to see if class argument is correct."""
+    while_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--while-loops"])
+    assert while_result.exit_code == 0
+    assert "0" in while_result.stdout
+
+def test_for():
+    """Test case to see if class argument is correct."""
+    for_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
+    assert for_result.exit_code == 0
+    assert "1" in for_result.stdout
 
 def test_main_imports():
     """Test case to see if import argument is correct."""
@@ -24,7 +35,7 @@ def test_main_comment():
     """Test case to see if comment argument is correct."""
     comment_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--comments"])
     assert comment_result.exit_code == 0
-    assert "14" in comment_result.stdout
+    assert "17" in comment_result.stdout
 
 
 def test_main_function_def():
@@ -32,7 +43,7 @@ def test_main_function_def():
     function_def_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                                   "--function-definitions"])
     assert function_def_result.exit_code == 0
-    assert "8" in function_def_result.stdout
+    assert "9" in function_def_result.stdout
 
 
 def test_main_function_without_docstrings():
@@ -40,7 +51,7 @@ def test_main_function_without_docstrings():
     func_wo_docstr_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                                     "--function-without-docstrings"])
     assert func_wo_docstr_result.exit_code == 0
-    assert "4" in func_wo_docstr_result.stdout
+    assert "5" in func_wo_docstr_result.stdout
 
 
 def test_main_function_with_docstrings():
@@ -69,7 +80,7 @@ def test_if_statements():
     """Test case to see if 'if statements' argument is correct."""
     if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--if-statements"])
     assert if_state.exit_code == 0
-    assert "1" in if_state.stdout
+    assert "2" in if_state.stdout
 
 def test_main_parameters():
     """Test case to see if function finds the parameters."""
@@ -83,4 +94,4 @@ def test_count_assignment_statements():
     if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                        "--assignment-statements"])
     assert if_state.exit_code == 0
-    assert "9" in if_state.stdout
+    assert "10" in if_state.stdout
