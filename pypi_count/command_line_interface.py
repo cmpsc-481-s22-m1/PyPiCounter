@@ -16,10 +16,10 @@ console = Console()
 @cli.command()
 def main(  # pylint: disable=R0913
     input_file: Path = typer.Option(...),
-    class_def: bool = typer.Option(False, "--class-def"),
+    class_def: bool = typer.Option(False, "--class-definitions"),
     import_statements: bool = typer.Option(False, "--import-statements"),
     comment: bool = typer.Option(False, "--comments"),
-    function_def: bool = typer.Option(False, "--function-def"),
+    function_def: bool = typer.Option(False, "--function-definitions"),
     if_statements: bool = typer.Option(False, "--if-statements"),
     function_without_docstrings: bool = typer.Option(False, "--function-without-docstrings"),
     function_with_docstrings: bool = typer.Option(False, "--function-with-docstrings"),
