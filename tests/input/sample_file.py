@@ -18,7 +18,8 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-y = 1
+fix = 1
+fix = y
 while y < 3:   # Sample While loop
     print(y)
     y += 1
