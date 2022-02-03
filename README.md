@@ -1,5 +1,19 @@
 # PyPiCount
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
+![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Usage](#usefulness-of-project)
+- [Getting Started](#getting-started)
+  - [Importing to Another Tool](#importing-into-another-grading-tool)
+  - [Stand-Alone Usage](#stand-alone-usage)
+- [Help and Bug Fixes](#help-and-bug-fixes)
+- [Authors](#authors)
+
 ## Overview
 
 - This project is a tool that, on its own, will provide assistance to
@@ -30,6 +44,58 @@ to identify in the source code (as LibCST will find all matches of this construc
 
 ## Getting Started
 
+### Importing into Another Grading Tool
+
+1. Install from PyPi by running `poetry add pypicount` in your terminal.
+2. Import the PyPiCounter package withe the syntax: `import pypicount`.
+3. Run the functions in the package using the `PiPyCount.[function]` syntax.
+For example, `PiPyCount.count_class_definitions(file_name)`
+
+The list of functions available are:
+
+```python
+
+count_class_definitions(file_name)                           
+# returns the number of class definitions
+
+count_comments(file_name)                                    
+# returns the number of comments
+
+count_import_statements(file_name)                           
+# returns the number of import statements
+
+count_for_loops(file_name)                                   
+# returns the number of for loops
+
+count_while_loops(file_name)                                 
+# returns the number of while loops
+
+count_function_definitions(file_name)                        
+# returns the number of function definitions  
+
+count_functions_without_docstrings(file_name)                
+# returns the number of functions without docstrings
+
+count_functions_with_docstrings(file_name)                   
+# returns the number of functions with docstrings
+
+count_classes_with_docstrings(file_name)                     
+# returns the number of classes with docstrings
+
+count_classes_without_docstrings(file_name)                  
+# returns the number of classes without docstrings
+
+count_function_parameters(file_name, function_name)          
+# returns the number of function parameters
+# after specifying the function name
+
+count_assignment_statements(file_name)                       
+# returns the number of assignment statements
+
+```
+
+### Stand-Alone Usage
+
 Users can get started with this project by following the following steps:
 
 1. Clone this repository and `cd` into the project folder
@@ -40,23 +106,30 @@ different arguments that can be passed. The list of the different arguments
 are listed below:
 
   ```python
+  Usage: pypicount [OPTIONS] INPUT_FILE
+
+    Main method to display the different options.
+
+  Arguments:
+    INPUT_FILE  [required]
+
   Options:
-    --input-file PATH              [required]
-    --class_def                    [default: False]
-    --import_statements            [default: False]
-    --comment                      [default: False]
-    --function_def                 [default: False]
-    --if_statements                [default: False]
-    --function_without_docstrings  [default: False]
-    --function_with_docstrings     [default: False]
-    --class_with_docstrings        [default: False]
-    --class_without_docstrings     [default: False]
+    --class-definitions            [default: False]
+    --import-statements            [default: False]
+    --comments                     [default: False]
+    --function-definitions         [default: False]
+    --if-statements                [default: False]
+    --function-without-docstrings  [default: False]
+    --function-with-docstrings     [default: False]
+    --class-with-docstrings        [default: False]
+    --class-without-docstrings     [default: False]
+    --function-parameters          [default: None]
+    --assignment-statements        [default: False]
     --install-completion           Install completion for the current shell.
     --show-completion              Show completion for the current shell, to
                                    copy it or customize the installation.
 
     --help                         Show this message and exit.
-
   ```
 
 These are the different types of arguments that PyPiCount will accept in this release.
@@ -79,6 +152,7 @@ Sample Output:
 
 ```python
 # of functions with docstrings: 1
+```
 
 ## Help and Bug Fixes
 
