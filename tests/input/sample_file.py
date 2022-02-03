@@ -6,6 +6,8 @@ import pytest  # pylint: disable=W0611
 class TestClass:
     "This is a test class for the py counter."
     age = 10
+    x = 2
+    x +=4
 
     def test_greeting(self):  # pylint: disable=R0201
         """Test greeting for the test class."""
@@ -18,12 +20,6 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-class AssignmentClass:
-    "This will be using addition to test assignmentstatements"
-    
-    x = 2
-    x += 4
-    print(x)
 
 # Output: 10
 print(TestClass.age)
