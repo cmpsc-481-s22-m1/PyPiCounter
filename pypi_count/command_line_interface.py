@@ -16,17 +16,17 @@ console = Console()
 @cli.command()
 def main(  # pylint: disable=R0913
     input_file: Path = typer.Option(...),
-    class_def: bool = typer.Option(False, "--class_def"),
-    import_statements: bool = typer.Option(False, "--import_statements"),
-    comment: bool = typer.Option(False, "--comment"),
-    function_def: bool = typer.Option(False, "--function_def"),
-    if_statements: bool = typer.Option(False, "--if_statements"),
-    function_without_docstrings: bool = typer.Option(False, "--function_without_docstrings"),
-    function_with_docstrings: bool = typer.Option(False, "--function_with_docstrings"),
-    class_with_docstrings: bool = typer.Option(False, "--class_with_docstrings"),
-    class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
-    find_parameters: bool = typer.Option(False, "--find_parameters"),
-    assignment_statements: bool = typer.Option(False, "--assignment_statements"),
+    class_def: bool = typer.Option(False, "--class-def"),
+    import_statements: bool = typer.Option(False, "--import-statements"),
+    comment: bool = typer.Option(False, "--comments"),
+    function_def: bool = typer.Option(False, "--function-def"),
+    if_statements: bool = typer.Option(False, "--if-statements"),
+    function_without_docstrings: bool = typer.Option(False, "--function-without-docstrings"),
+    function_with_docstrings: bool = typer.Option(False, "--function-with-docstrings"),
+    class_with_docstrings: bool = typer.Option(False, "--class-with-docstrings"),
+    class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
+    find_parameters: bool = typer.Option(False, "--find-parameters"),
+    assignment_statements: bool = typer.Option(False, "--assignment-statements"),
 
 ):
     """Main method to display the different options."""
