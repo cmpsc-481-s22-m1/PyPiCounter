@@ -38,7 +38,7 @@ def test_count_if_statements():
 
 def test_count_functions_without_docstrings():
     """Test case for counting the number of functions that do not have docstrings."""
-    expected_function_dst = 4
+    expected_function_dst = 5
     assert test_pycount.count_functions_without_docstring() == expected_function_dst
 
 def test_count_functions_with_docstrings():
