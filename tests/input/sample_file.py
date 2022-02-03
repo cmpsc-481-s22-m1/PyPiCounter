@@ -47,6 +47,13 @@ class AnotherClass: # pylint: disable=C0115
         """Test sample function."""
         print("Found my docstring!")
 
+    def test_sample_for(self):
+        fruits = ["apple", "banana", "cherry"]
+            for x in fruits:    # Sample for loop
+                if x == "banana":
+                    break
+                print(x)
+
 # Output: <function Person.greet>
 print(AnotherClass.test_greeting_two)
 print()
