@@ -61,6 +61,6 @@ def test_find_parameters():
     expected_parameters = 0
     assert test_pycount.count_function_parameters() == expected_parameters
 
-def test_count_assignment_statements():
+def test_count_assignment_statements(): #pylint: disable=C0116
     expected_assignment_statements = 10
     assert test_pycount.count_assignment_statements() == expected_assignment_statements
