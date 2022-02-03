@@ -18,10 +18,10 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-s = 1
-while s < 3:   # Sample While loop
-    print(s)
-    s += 1
+y = 1
+while y < 3:   # Sample While loop
+    print(y)
+    y += 1
 
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:    # Sample for loop
