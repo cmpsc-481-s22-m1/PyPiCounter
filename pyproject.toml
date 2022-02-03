@@ -5,8 +5,8 @@ description = "A counting program used for different Python packages and modules
 authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
 license = "MIT"
 packages = [
-    { include = "py_counter.py", from="pypi_count" },
-    { include = "pypi_count/py_counter.py"},
+    { include = "pypi_count" },
+    { include = "tests" },
 ]
 
 [tool.poetry.scripts]
