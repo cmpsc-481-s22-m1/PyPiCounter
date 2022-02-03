@@ -14,7 +14,7 @@ console = Console()
 
 
 @cli.command()
-def main(  # pylint: disable=R0913
+def main(  # pylint: disable=R0913,R0912
     input_file: Path,
     class_def: bool = typer.Option(False, "--class-definitions"),
     import_statements: bool = typer.Option(False, "--import-statements"),
@@ -43,7 +43,8 @@ def main(  # pylint: disable=R0913
             console.print("\n# of comments: " + str(pycount.count_comments()))
 
         if function_def:
-            console.print("\n# of function definitions: " + str(pycount.count_function_definitions()))
+            console.print("\n# of function definitions: " + \
+            str(pycount.count_function_definitions()))
 
         if function_without_docstrings:
             console.print("\n# of functions w/o docstrings: " + \
