@@ -18,6 +18,12 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
+class AssignmentClass:
+    "This will be using addition to test assignmentstatements"
+    
+    x = 2
+    x += 4
+    print(x)
 
 # Output: 10
 print(TestClass.age)
