@@ -18,7 +18,7 @@ def test_count_comments():
 
 def test_count_while():
     """Test case for counting the while loops."""
-    expected_while = 1
+    expected_while = 0
     assert test_pycount.count_while() == expected_while
 
 def test_import_statements():
@@ -28,7 +28,7 @@ def test_import_statements():
 
 def test_count_for():
     """Test case for counting the for loops."""
-    expected_for = 2
+    expected_for = 1
     assert test_pycount.count_for() == expected_for
 
 def test_count_if_statements():
