@@ -16,13 +16,13 @@ def test_while():
     """Test case to see if class argument is correct."""
     while_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--while-loops"])
     assert while_result.exit_code == 0
-    assert "1" in while_result.stdout
+    assert "0" in while_result.stdout
 
 def test_for():
     """Test case to see if class argument is correct."""
     for_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
     assert for_result.exit_code == 0
-    assert "0" in for_result.stdout
+    assert "1" in for_result.stdout
 
 def test_main_imports():
     """Test case to see if import argument is correct."""
