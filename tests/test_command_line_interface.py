@@ -20,9 +20,9 @@ def test_while():
 
 def test_for():
     """Test case to see if class argument is correct."""
-    class_for = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
-    assert class_for.exit_code == 0
-    assert "1" in class_for.stdout
+    for_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
+    assert for_result.exit_code == 0
+    assert "1" in for_result.stdout
 
 def test_main_imports():
     """Test case to see if import argument is correct."""
