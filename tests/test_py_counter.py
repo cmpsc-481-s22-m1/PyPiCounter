@@ -63,5 +63,5 @@ def test_find_parameters():
 
 def test_count_assignment_statements():
     """Test case for counting assignement statements."""
-    expected_assignment_statements = 2
+    expected_assignment_statements = 3
     assert test_pycount.count_assignment_statements() == expected_assignment_statements
