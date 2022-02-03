@@ -40,23 +40,30 @@ different arguments that can be passed. The list of the different arguments
 are listed below:
 
   ```python
+  Usage: pypicount [OPTIONS] INPUT_FILE
+
+    Main method to display the different options.
+
+  Arguments:
+    INPUT_FILE  [required]
+
   Options:
-    --input-file PATH              [required]
-    --class_def                    [default: False]
-    --import_statements            [default: False]
-    --comment                      [default: False]
-    --function_def                 [default: False]
-    --if_statements                [default: False]
-    --function_without_docstrings  [default: False]
-    --function_with_docstrings     [default: False]
-    --class_with_docstrings        [default: False]
-    --class_without_docstrings     [default: False]
+    --class-definitions            [default: False]
+    --import-statements            [default: False]
+    --comments                     [default: False]
+    --function-definitions         [default: False]
+    --if-statements                [default: False]
+    --function-without-docstrings  [default: False]
+    --function-with-docstrings     [default: False]
+    --class-with-docstrings        [default: False]
+    --class-without-docstrings     [default: False]
+    --find-parameters              [default: False]
+    --assignment-statements        [default: False]
     --install-completion           Install completion for the current shell.
     --show-completion              Show completion for the current shell, to
                                    copy it or customize the installation.
 
     --help                         Show this message and exit.
-
   ```
 
 These are the different types of arguments that PyPiCount will accept in this release.
