@@ -47,9 +47,9 @@ class AnotherClass: # pylint: disable=C0115
         """Test sample function."""
         print("Found my docstring!")
 
-    def test_sample_for(self):
-        fruits = ["apple", "banana", "cherry"]
-        for x in fruits:    # Sample for loop
+    def test_sample_for(self): # pylint: disable=C0116,R0201
+        fruits = ["apple", "banana", "cherry"] # Sample for loop
+        for x in fruits:    # pylint: disable=R0201
             if x == "banana":
                 break
             print(x)
