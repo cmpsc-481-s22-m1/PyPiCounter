@@ -40,12 +40,14 @@ different arguments that can be passed. The list of the different arguments
 are listed below:
 
   ```python
-  Usage: pypicount [OPTIONS]
+  Usage: pypicount [OPTIONS] INPUT_FILE
 
     Main method to display the different options.
 
+  Arguments:
+    INPUT_FILE  [required]
+
   Options:
-    --input-file PATH              [required]
     --class-definitions            [default: False]
     --import-statements            [default: False]
     --comments                     [default: False]
