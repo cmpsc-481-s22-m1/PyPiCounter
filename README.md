@@ -71,16 +71,16 @@ count_while_loops(file_name)
 # returns the number of while loops
 
 count_function_definitions(file_name)                        
-# returns the number of function difinitions  
+# returns the number of function definitions  
 
 count_functions_without_docstrings(file_name)                
-# returns the number of functions without doctrings
+# returns the number of functions without docstrings
 
 count_functions_with_docstrings(file_name)                   
 # returns the number of functions with docstrings
 
 count_classes_with_docstrings(file_name)                     
-# returns the number of classes with doctrings
+# returns the number of classes with docstrings
 
 count_classes_without_docstrings(file_name)                  
 # returns the number of classes without docstrings
