@@ -78,10 +78,10 @@ def main(  # pylint: disable=R0913,R0912
 
         if while_loops:
             console.print("\n of assignment statements: " + \
-            str(pycount.count_while()))
+            str(pycount.count_while_loops()))
 
         if for_loops:
             console.print("\n of assignment statements: " + \
-            str(pycount.count_for()))
+            str(pycount.count_for_loops()))
     else:
         console.print("Please input a valid file!")
