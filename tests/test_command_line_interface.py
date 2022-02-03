@@ -93,4 +93,4 @@ def test_count_assignment_statements():
                                        "tests/input/sample_file.py", \
                                        "--assignment_statements"])
     assert if_state.exit_code == 0
-    assert "3" in if_state.stdout
+    assert "2" in if_state.stdout
