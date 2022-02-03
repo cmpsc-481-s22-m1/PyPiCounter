@@ -100,6 +100,11 @@ class PyPiCount:
                 param_result = len(func.params.params)
         return param_result
 
+    def count_augmented_assignment_statements(self):
+            """Counting the augmented assignment statement."""
+            aug_assignment_statement = m.findall(self.search, m.AugAssign())
+            return len(aug_assignment_statement)
+
 
     def count_assignment_statements(self):
         """Counting the assignment statement."""
