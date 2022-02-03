@@ -35,7 +35,7 @@ def test_main_comment():
     """Test case to see if comment argument is correct."""
     comment_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--comments"])
     assert comment_result.exit_code == 0
-    assert "14" in comment_result.stdout
+    assert "15" in comment_result.stdout
 
 
 def test_main_function_def():
@@ -80,7 +80,7 @@ def test_if_statements():
     """Test case to see if 'if statements' argument is correct."""
     if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--if-statements"])
     assert if_state.exit_code == 0
-    assert "1" in if_state.stdout
+    assert "2" in if_state.stdout
 
 def test_main_parameters():
     """Test case to see if function finds the parameters."""
