@@ -31,11 +31,11 @@ class PyPiCount:
         """Counting the if statements."""
         return len(m.findall(self.search, m.If()))
 
-    def count_while(self):
+    def count_while_loops(self):
         """Counting the while loops."""
         return len(m.findall(self.search, m.While()))
 
-    def count_for(self):
+    def count_for_loops(self):
         """Counting the for loops."""
         return len(m.findall(self.search, m.For()))
 
@@ -57,7 +57,7 @@ class PyPiCount:
         return count
 
 
-    def count_functions_with_docstring(self):  # pylint: disable=R1710
+    def count_functions_with_docstrings(self):  # pylint: disable=R1710
         """Counting the function definitions with docstrings."""
         function_definitions2 = m.findall(self.search, m.FunctionDef())
         count = 0
@@ -68,7 +68,7 @@ class PyPiCount:
                 total.append(count)
         return count
 
-    def count_classes_without_docstring(self):  # pylint: disable=R1710
+    def count_classes_without_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions = m.findall(self.search, m.ClassDef())
         count = 0
@@ -80,7 +80,7 @@ class PyPiCount:
         return count
 
 
-    def count_classes_with_docstring(self):  # pylint: disable=R1710
+    def count_classes_with_docstrings(self):  # pylint: disable=R1710
         """Counting the class definitions without docstrings."""
         class_definitions2 = m.findall(self.search, m.ClassDef())
         count = 0
