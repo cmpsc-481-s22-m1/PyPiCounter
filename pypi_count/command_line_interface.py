@@ -25,7 +25,7 @@ def main(  # pylint: disable=R0913,R0912
     function_with_docstrings: bool = typer.Option(False, "--function-with-docstrings"),
     class_with_docstrings: bool = typer.Option(False, "--class-with-docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
-    find_parameters: bool = typer.Option(False, "--find-parameters"),
+    find_parameters: bool = typer.Option(False, "--function-parameters"),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
 
 ):

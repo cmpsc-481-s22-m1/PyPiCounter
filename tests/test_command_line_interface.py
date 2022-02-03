@@ -73,10 +73,10 @@ def test_if_statements():
 
 def test_main_parameters():
     """Test case to see if function finds the parameters."""
-    find_parameter_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
-                                                    "--find-parameters"])
-    assert find_parameter_result.exit_code == 0
-    assert "0" in find_parameter_result.stdout
+    function_parameter_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
+                                                    "--function-parameters"])
+    assert function_parameter_result.exit_code == 0
+    assert "1" in function_parameter_result.stdout
 
 def test_count_assignment_statements():
     """Test case to see if 'assignment statements' argument is correct."""
