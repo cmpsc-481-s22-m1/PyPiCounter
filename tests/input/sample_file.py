@@ -49,7 +49,7 @@ class AnotherClass: # pylint: disable=C0115
 
     def test_sample_for(self): # pylint: disable=C0116,R0201
         fruits = ["apple", "banana", "cherry"] # Sample for loop
-        for x in fruits:    # pylint: disable=R0201
+        for x in fruits:    # pylint: disable=R0201,C0103
             if x == "banana":
                 break
             print(x)
