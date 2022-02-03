@@ -95,4 +95,3 @@ def test_count_assignment_statements():
                                        "--assignment-statements"])
     assert if_state.exit_code == 0
     assert "10" in if_state.stdout
-
