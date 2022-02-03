@@ -1,19 +1,19 @@
 # PyPiCount
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Release](https://img.shields.io/github/release/cmpsc-481-s22-m1/PyPiCounter.svg?style=flat)]() 
+![GitHub Release](https://img.shields.io/github/release/cmpsc-481-s22-m1/PyPiCounter.svg?style=flat) 
 ![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
 ![githhub issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
 
-# Table of contents
+## Table of Contents
 
-* [Overview](#overview)
-* [Project Usage](#usefulness-of-project)
-* [Getting Started](#getting-started)
-  * [Importing to Another Tool](#importing-into-another-grading-tool) 
-  * [Stand-Alone Usage](#stand-alone-usage)
-* [Help and Bug Fixes](#help-and-bug-fixes)
-* [Authors](#authors)
-
+- [Overview](#overview)
+- [Project Usage](#usefulness-of-project)
+- [Getting Started](#getting-started)
+  - [Importing to Another Tool](#importing-into-another-grading-tool)
+  - [Stand-Alone Usage](#stand-alone-usage)
+- [Help and Bug Fixes](#help-and-bug-fixes)
+- [Authors](#authors)
 
 ## Overview
 
@@ -56,18 +56,42 @@ The list of functions available are:
 
 ```python
 
-count_class_definitions(file_name)                           # returns the number of class definitions
-count_comments(file_name)                                    # returns the number of comments
-count_import_statements(file_name)                           # returns the number of import statements
-count_for_loops(file_name)                                   # returns the number of for loops
-count_while_loops(file_name)                                 # returns the number of while loops
-count_function_definitions(file_name)                        # returns the number of function difinitions  
-count_functions_without_docstrings(file_name)                # returns the number of functions without doctrings
-count_functions_with_docstrings(file_name)                   # returns the number of functions with docstrings
-count_classes_with_docstrings(file_name)                     # returns the number of classes with doctrings
-count_classes_without_docstrings(file_name)                  # returns the number of classes without docstrings
-count_function_parameters(file_name, function_name)          # returns the number of function parameters, after specifying the function name
-count_assignment_statements(file_name)                       # returns the number of assignment statements
+count_class_definitions(file_name)                           
+# returns the number of class definitions
+
+count_comments(file_name)                                    
+# returns the number of comments
+
+count_import_statements(file_name)                           
+# returns the number of import statements
+
+count_for_loops(file_name)                                   
+# returns the number of for loops
+
+count_while_loops(file_name)                                 
+# returns the number of while loops
+
+count_function_definitions(file_name)                        
+# returns the number of function difinitions  
+
+count_functions_without_docstrings(file_name)                
+# returns the number of functions without doctrings
+
+count_functions_with_docstrings(file_name)                   
+# returns the number of functions with docstrings
+
+count_classes_with_docstrings(file_name)                     
+# returns the number of classes with doctrings
+
+count_classes_without_docstrings(file_name)                  
+# returns the number of classes without docstrings
+
+count_function_parameters(file_name, function_name)          
+# returns the number of function parameters
+# after specifying the function name
+
+count_assignment_statements(file_name)                       
+# returns the number of assignment statements
 
 ```
 
