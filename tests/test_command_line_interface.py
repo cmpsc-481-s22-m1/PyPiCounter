@@ -43,8 +43,7 @@ def test_main_function_def():
     function_def_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                                   "--function-definitions"])
     assert function_def_result.exit_code == 0
-    assert "7" in function_def_result.stdout
-
+    assert "9" in function_def_result.stdout
 
 
 def test_main_function_without_docstrings():
@@ -52,7 +51,7 @@ def test_main_function_without_docstrings():
     func_wo_docstr_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                                     "--function-without-docstrings"])
     assert func_wo_docstr_result.exit_code == 0
-    assert "4" in func_wo_docstr_result.stdout
+    assert "5" in func_wo_docstr_result.stdout
 
 
 def test_main_function_with_docstrings():
@@ -95,5 +94,5 @@ def test_count_assignment_statements():
     if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                        "--assignment-statements"])
     assert if_state.exit_code == 0
-    assert "3" in if_state.stdout
+    assert "10" in if_state.stdout
 
