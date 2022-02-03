@@ -13,7 +13,7 @@ def test_count_class_defintions():
 
 def test_count_comments():
     """Test case for counting the class definitions."""
-    expected_comments = 15
+    expected_comments = 17
     assert test_pycount.count_comments() == expected_comments
 
 def test_count_while():
