@@ -11,7 +11,6 @@ def test_count_class_defintions():
     expected_class = 2
     assert test_pycount.count_class_definitions() == expected_class
 
-
 def test_count_comments():
     """Test case for counting the class definitions."""
     expected_comments = 14
