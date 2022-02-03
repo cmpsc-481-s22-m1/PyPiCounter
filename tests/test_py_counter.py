@@ -13,12 +13,12 @@ def test_count_class_defintions():
 
 def test_count_comments():
     """Test case for counting the class definitions."""
-    expected_comments = 14
+    expected_comments = 15
     assert test_pycount.count_comments() == expected_comments
 
 def test_count_while():
     """Test case for counting the while loops."""
-    expected_while = 0
+    expected_while = 1
     assert test_pycount.count_while() == expected_while
 
 def test_import_statements():
@@ -28,12 +28,12 @@ def test_import_statements():
 
 def test_count_for():
     """Test case for counting the for loops."""
-    expected_for = 1
+    expected_for = 2
     assert test_pycount.count_for() == expected_for
 
 def test_count_if_statements():
     """Test case for counting the if statements."""
-    expected_if = 1
+    expected_if = 2
     assert test_pycount.count_if_statements() == expected_if
 
 def test_count_functions_without_docstrings():
