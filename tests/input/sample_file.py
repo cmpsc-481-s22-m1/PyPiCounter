@@ -18,12 +18,6 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-fruits = ["apple", "banana", "cherry"]
-for x in fruits:    # Sample for loop
-    if x == "banana":
-        break
-    print(x)
-
 # Output: 10
 print(TestClass.age)
 
@@ -36,6 +30,7 @@ print(TestClass.sample_function)
 
 # Output: "This is a person class"
 print(TestClass.__doc__)
+
 
 class AnotherClass: # pylint: disable=C0115
     def test_greeting_two(self): # pylint: disable=C0116,R0201
