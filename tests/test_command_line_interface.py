@@ -11,7 +11,7 @@ def test_main_class():
     class_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--class-definitions"])
     assert class_result.exit_code == 0
     assert "2" in class_result.stdout
-    
+
 def test_while():
     """Test case to see if class argument is correct."""
     while_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--while-loops"])
