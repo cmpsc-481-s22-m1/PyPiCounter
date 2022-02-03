@@ -18,6 +18,18 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
+ 
+sample == 1
+while sample < 3:   # Sample While loop
+    print(sample)
+    sample += 1
+
+    
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:    # Sample for loop
+    if x == "banana":
+        break
+    print(x)
 
 # Output: 10
 print(TestClass.age)
