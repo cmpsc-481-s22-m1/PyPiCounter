@@ -12,13 +12,13 @@ def test_main_class():
     assert class_result.exit_code == 0
     assert "2" in class_result.stdout
 
-def test_while():
+def test_while_loops():
     """Test case to see if class argument is correct."""
     while_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--while-loops"])
     assert while_result.exit_code == 0
     assert "0" in while_result.stdout
 
-def test_for():
+def test_for_loops():
     """Test case to see if class argument is correct."""
     for_result = cli_runner.invoke(cli, ["tests/input/sample_file.py", "--for-loops"])
     assert for_result.exit_code == 0
