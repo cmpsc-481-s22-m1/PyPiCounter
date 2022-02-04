@@ -91,7 +91,7 @@ def test_count_augmented_assignment_statements():
     """Test case to see if 'augmented assignment statements' argument is correct."""
     aug_assign_state = cli_runner.invoke(cli, ["--input-file", \
                                        "tests/input/sample_file.py", \
-                                       "--assignment_statements"])
+                                       "--augmented_assignment_statements"])
     assert aug_assign_state.exit_code == 0
     assert "1" in aug_assign_state.stdout
 
