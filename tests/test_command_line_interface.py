@@ -93,7 +93,7 @@ def test_count_augmented_assignment_statements():
                                        "tests/input/sample_file.py", \
                                        "--assignment_statements"])
     assert aug_assign_state.exit_code == 0
-    assert "3" in aug_assign_state.stdout
+    assert "1" in aug_assign_state.stdout
 
 def test_count_assignment_statements():
     """Test case to see if 'assignment statements' argument is correct."""
