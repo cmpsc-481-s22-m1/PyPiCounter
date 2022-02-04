@@ -26,7 +26,7 @@ def main(  # pylint: disable=R0913
     class_with_docstrings: bool = typer.Option(False, "--class_with_docstrings"),
     class_without_docstrings: bool = typer.Option(False, "--class_without_docstrings"),
     find_parameters: bool = typer.Option(False, "--find_parameters"),
-    augmented_assignment_statements: bool = typer.Option(False, "--augmented_assignment_statements"),
+    augmented_assignment_statements: bool = typer.Option(False,"--augmented_assignment_statements"),
     assignment_statements: bool = typer.Option(False, "--assignment_statements"),
 
 ):
