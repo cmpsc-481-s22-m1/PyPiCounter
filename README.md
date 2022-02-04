@@ -98,9 +98,8 @@ count_assignment_statements(file_name)
 
 Users can get started with this project by following the following steps:
 
-1. Install the package with pip, using the command `pip install pypicount` 
+1. Install the package with pip, using the command `pip install pypicount`
 or `pipx install pypicount`
-
 2. To familiarize yourself with the arguments accepted for this project, run the
 command ```poetry run pypicount --help```. This command displays all of the
 different arguments that can be passed. The list of the different arguments
