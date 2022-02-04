@@ -61,7 +61,7 @@ def main(  # pylint: disable=R0913,R0912
             str(pycount.count_classes_without_docstrings()))
 
         if class_with_docstrings:
-            console.print("\n# of functions with docstrings: " + \
+            console.print("\n# of classes with docstrings: " + \
             str(pycount.count_classes_with_docstrings()))
 
         if if_statements:
@@ -77,11 +77,11 @@ def main(  # pylint: disable=R0913,R0912
             str(pycount.count_assignment_statements()))
 
         if while_loops:
-            console.print("\n of assignment statements: " + \
+            console.print("\n of while loop statements: " + \
             str(pycount.count_while_loops()))
 
         if for_loops:
-            console.print("\n of assignment statements: " + \
+            console.print("\n of for loop statements: " + \
             str(pycount.count_for_loops()))
     else:
         console.print("Please input a valid file!")
