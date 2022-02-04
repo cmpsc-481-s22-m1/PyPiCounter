@@ -55,41 +55,41 @@ The list of functions available are:
 
 ```python
 
-count_class_definitions(file_name)                           
+count_class_definitions(file_name)                      
 # returns the number of class definitions
 
-count_comments(file_name)                                    
+count_comments(file_name)                                
 # returns the number of comments
 
-count_import_statements(file_name)                           
+count_import_statements(file_name)                     
 # returns the number of import statements
 
-count_for_loops(file_name)                                   
+count_for_loops(file_name)                           
 # returns the number of for loops
 
-count_while_loops(file_name)                                 
+count_while_loops(file_name)                           
 # returns the number of while loops
 
-count_function_definitions(file_name)                        
+count_function_definitions(file_name)            
 # returns the number of function definitions  
 
-count_functions_without_docstrings(file_name)                
+count_functions_without_docstrings(file_name)         
 # returns the number of functions without docstrings
 
-count_functions_with_docstrings(file_name)                   
+count_functions_with_docstrings(file_name)          
 # returns the number of functions with docstrings
 
-count_classes_with_docstrings(file_name)                     
+count_classes_with_docstrings(file_name)                  
 # returns the number of classes with docstrings
 
-count_classes_without_docstrings(file_name)                  
+count_classes_without_docstrings(file_name)             
 # returns the number of classes without docstrings
 
-count_function_parameters(file_name, function_name)          
+count_function_parameters(file_name, function_name)    
 # returns the number of function parameters
 # after specifying the function name
 
-count_assignment_statements(file_name)                       
+count_assignment_statements(file_name)              
 # returns the number of assignment statements
 
 ```
