@@ -6,6 +6,9 @@ import pytest  # pylint: disable=W0611
 class TestClass:
     "This is a test class for the py counter."
     age = 10
+    x = 4
+    x += 2
+    print(x)
 
     def test_greeting(self):  # pylint: disable=R0201
         """Test greeting for the test class."""
