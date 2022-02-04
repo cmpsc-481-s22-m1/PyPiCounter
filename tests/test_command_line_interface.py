@@ -92,7 +92,7 @@ def test_count_augmented_assignment_statements():
     aug_assign_state = cli_runner.invoke(cli, ["--input-file", \
                                        "tests/input/sample_file.py", \
                                        "--assignment_statements"])
-    assert if_state.exit_code == 0
+    assert aug_assign_state.exit_code == 0
     assert "1" in aug_assign_state.stdout
 
 def test_count_assignment_statements():
@@ -100,5 +100,5 @@ def test_count_assignment_statements():
     assign_state = cli_runner.invoke(cli, ["--input-file", \
                                        "tests/input/sample_file.py", \
                                        "--assignment_statements"])
-    assert if_state.exit_code == 0
+    assert assign_state.exit_code == 0
     assert "3" in assign_state.stdout

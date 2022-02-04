@@ -64,8 +64,8 @@ def test_find_parameters():
 
 def test_count_augmented_assignment_statements():
     """Test case for counting augmented assignement statements."""
-    expected_aug_assignment_statements = 1
-    assert test_pycount.count_augmented_assignment_statements() == expected_aug_assignment_statements
+    exp_aug_assignment_statements = 1
+    assert test_pycount.count_augmented_assignment_statements() == exp_aug_assignment_statements
 
 def test_count_assignment_statements():
     """Test case for counting assignement statements."""
