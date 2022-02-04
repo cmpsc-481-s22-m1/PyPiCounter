@@ -51,6 +51,8 @@ are listed below:
     --function_with_docstrings     [default: False]
     --class_with_docstrings        [default: False]
     --class_without_docstrings     [default: False]
+    --assignment_statements        [default: False]
+    --augmented_assignment_statements [default: False]
     --install-completion           Install completion for the current shell.
     --show-completion              Show completion for the current shell, to
                                    copy it or customize the installation.
