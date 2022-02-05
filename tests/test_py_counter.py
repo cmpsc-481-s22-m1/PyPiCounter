@@ -62,10 +62,10 @@ def test_function_parameters():
     assert test_pycount.count_function_parameters("test_saying_two") == expected_parameters
 
 def test_count_assignment_statements(): #pylint: disable=C0116
-    expected_assignment_statements = 10
+    expected_assignment_statements = 11
     assert test_pycount.count_assignment_statements() == expected_assignment_statements
 
 def test_count_augmented_assignment_statements():
     """Test case for counting augmented assignement statements."""
-    exp_aug_assignment_statements = 1
+    exp_aug_assignment_statements = 2
     assert test_pycount.count_augmented_assignment_statements() == exp_aug_assignment_statements
