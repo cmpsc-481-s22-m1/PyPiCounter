@@ -92,6 +92,10 @@ count_function_parameters(file_name, function_name)
 count_assignment_statements(file_name)              
 # returns the number of assignment statements
 
+count_augmented_assignment_statements(file_name)
+# returns the number of assignment statements that include
+an augmented assignment operator (+=, -=)
+
 ```
 
 ### Stand-Alone Usage
@@ -106,30 +110,35 @@ different arguments that can be passed. The list of the different arguments
 are listed below:
 
   ```python
-  Usage: pypicount [OPTIONS] INPUT_FILE
+ Usage: pypicount [OPTIONS] INPUT_FILE
 
-    Main method to display the different options.
+  Main method to display the different options.
 
-  Arguments:
-    INPUT_FILE  [required]
+Arguments:
+  INPUT_FILE  [required]
 
-  Options:
-    --class-definitions            [default: False]
-    --import-statements            [default: False]
-    --comments                     [default: False]
-    --function-definitions         [default: False]
-    --if-statements                [default: False]
-    --function-without-docstrings  [default: False]
-    --function-with-docstrings     [default: False]
-    --class-with-docstrings        [default: False]
-    --class-without-docstrings     [default: False]
-    --function-parameters          [default: None]
-    --assignment-statements        [default: False]
-    --install-completion           Install completion for the current shell.
-    --show-completion              Show completion for the current shell, to
-                                   copy it or customize the installation.
+Options:
+  --class-definitions             [default: False]
+  --import-statements             [default: False]
+  --comments                      [default: False]
+  --function-definitions          [default: False]
+  --if-statements                 [default: False]
+  --function-without-docstrings   [default: False]
+  --function-with-docstrings      [default: False]
+  --class-with-docstrings         [default: False]
+  --class-without-docstrings      [default: False]
+  --function-parameters TEXT
+  --assignment-statements         [default: False]
+  --augmented-assignment-statements
+                                  [default: False]
+  --while-loops                   [default: False]
+  --for-loops                     [default: False]
+  --install-completion            Install completion for the current shell.
+  --show-completion               Show completion for the current shell, to
+                                  copy it or customize the installation.
 
-    --help                         Show this message and exit.
+  --help                          Show this message and exit.
+
   ```
 
 These are the different types of arguments that PyPiCount will accept in this release.
