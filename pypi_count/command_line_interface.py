@@ -27,6 +27,7 @@ def main(  # pylint: disable=R0913,R0912
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
     function_parameters: str = typer.Option(None),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
+    augmented_assignment_statements: bool = typer.Option(False,"--augmented_assignment_statements"),
     while_loops: bool = typer.Option(False, "--while-loops"),
     for_loops: bool = typer.Option(False, "--for-loops"),
 
