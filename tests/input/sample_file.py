@@ -8,8 +8,8 @@ class TestClass:
     real_age = 10
     def test_assign_state(self):
         "Test for augmented and regular assign state"
-        x = 2
-        x +=4
+        xyz = 2
+        xyz +=4
         print(x)
 
     def __init__(self, name, age):
