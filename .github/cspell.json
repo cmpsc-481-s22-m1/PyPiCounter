@@ -27,7 +27,8 @@
         "caldwella",
         "rachaelharris",
         "solisa",
-        "Picount"
+        "Picount",
+        "pypi"
     ],
     "ignorePaths": [
         ".github/**",

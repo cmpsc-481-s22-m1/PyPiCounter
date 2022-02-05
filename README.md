@@ -1,4 +1,18 @@
-# PyPiCount
+# PyPi-Counter
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
+![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Usage](#usefulness-of-project)
+- [Getting Started](#getting-started)
+  - [Importing to Another Tool](#importing-into-another-grading-tool)
+  - [Stand-Alone Usage](#stand-alone-usage)
+- [Help and Bug Fixes](#help-and-bug-fixes)
+- [Authors](#authors)
 
 ## Overview
 
@@ -30,32 +44,100 @@ to identify in the source code (as LibCST will find all matches of this construc
 
 ## Getting Started
 
+### Importing into Another Grading Tool
+
+1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
+2. Import the PyPiCounter package with the syntax: `import pypi_count`.
+3. Run the functions in the package using the `PiPyCount.[function]` syntax.
+For example, `PiPyCount.count_class_definitions(file_name)`
+
+The list of functions available are:
+
+```python
+
+count_class_definitions(file_name)                      
+# returns the number of class definitions
+
+count_comments(file_name)                                
+# returns the number of comments
+
+count_import_statements(file_name)                     
+# returns the number of import statements
+
+count_for_loops(file_name)                           
+# returns the number of for loops
+
+count_while_loops(file_name)                           
+# returns the number of while loops
+
+count_function_definitions(file_name)            
+# returns the number of function definitions  
+
+count_functions_without_docstrings(file_name)         
+# returns the number of functions without docstrings
+
+count_functions_with_docstrings(file_name)          
+# returns the number of functions with docstrings
+
+count_classes_with_docstrings(file_name)                  
+# returns the number of classes with docstrings
+
+count_classes_without_docstrings(file_name)             
+# returns the number of classes without docstrings
+
+count_function_parameters(file_name, function_name)    
+# returns the number of function parameters
+# after specifying the function name
+
+count_assignment_statements(file_name)              
+# returns the number of assignment statements
+
+count_augmented_assignment_statements(file_name)
+# returns the number of assignment statements that include
+an augmented assignment operator (+=, -=)
+
+```
+
+### Stand-Alone Usage
+
 Users can get started with this project by following the following steps:
 
-1. Clone this repository and `cd` into the project folder
-2. Run the command ```poetry install``` to install the dependencies for this project.
-3. To familiarize yourself with the arguments accepted for this project, run the
+1. Install the package with pip, using the command `pip install pypicount`
+or `pipx install pypi-counter`
+2. To familiarize yourself with the arguments accepted for this project, run the
 command ```poetry run pypicount --help```. This command displays all of the
 different arguments that can be passed. The list of the different arguments
 are listed below:
 
   ```python
-  Options:
-    --input-file PATH              [required]
-    --class_def                    [default: False]
-    --import_statements            [default: False]
-    --comment                      [default: False]
-    --function_def                 [default: False]
-    --if_statements                [default: False]
-    --function_without_docstrings  [default: False]
-    --function_with_docstrings     [default: False]
-    --class_with_docstrings        [default: False]
-    --class_without_docstrings     [default: False]
-    --install-completion           Install completion for the current shell.
-    --show-completion              Show completion for the current shell, to
-                                   copy it or customize the installation.
+ Usage: pypicount [OPTIONS] INPUT_FILE
 
-    --help                         Show this message and exit.
+  Main method to display the different options.
+
+Arguments:
+  INPUT_FILE  [required]
+
+Options:
+  --class-definitions             [default: False]
+  --import-statements             [default: False]
+  --comments                      [default: False]
+  --function-definitions          [default: False]
+  --if-statements                 [default: False]
+  --function-without-docstrings   [default: False]
+  --function-with-docstrings      [default: False]
+  --class-with-docstrings         [default: False]
+  --class-without-docstrings      [default: False]
+  --function-parameters TEXT
+  --assignment-statements         [default: False]
+  --augmented-assignment-statements
+                                  [default: False]
+  --while-loops                   [default: False]
+  --for-loops                     [default: False]
+  --install-completion            Install completion for the current shell.
+  --show-completion               Show completion for the current shell, to
+                                  copy it or customize the installation.
+
+  --help                          Show this message and exit.
 
   ```
 
@@ -72,13 +154,14 @@ poetry run pypicount --[argument] --input-file path/to/file
 Sample run command:
 
 ```python
-poetry run pypicount --class_with_docstrings --input-file tests/input/sample_file.py
+poetry run pypicount --class-with-docstrings --input-file tests/input/sample_file.py
 ```
 
 Sample Output:
 
 ```python
 # of functions with docstrings: 1
+```
 
 ## Help and Bug Fixes
 
