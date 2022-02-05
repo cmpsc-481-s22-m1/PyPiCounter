@@ -6,6 +6,9 @@ import pytest  # pylint: disable=W0611
 class TestClass:
     "This is a test class for the py counter."
     real_age = 10
+    x = 2
+    x +=4
+
     def __init__(self, name, age):
         "Init function that defines the parameters."
         self.name = name

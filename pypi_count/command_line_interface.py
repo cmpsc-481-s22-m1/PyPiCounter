@@ -14,7 +14,7 @@ console = Console()
 
 
 @cli.command()
-def main(  # pylint: disable=R0913,R0912
+def main(  # pylint: disable=R0913,R0912,R0914
     input_file: Path,
     class_def: bool = typer.Option(False, "--class-definitions"),
     import_statements: bool = typer.Option(False, "--import-statements"),
@@ -27,6 +27,7 @@ def main(  # pylint: disable=R0913,R0912
     class_without_docstrings: bool = typer.Option(False, "--class-without-docstrings"),
     function_parameters: str = typer.Option(None),
     assignment_statements: bool = typer.Option(False, "--assignment-statements"),
+    augmented_assignment_statements: bool = typer.Option(False,"--augmented_assignment_statements"),
     while_loops: bool = typer.Option(False, "--while-loops"),
     for_loops: bool = typer.Option(False, "--for-loops"),
 
@@ -75,6 +76,10 @@ def main(  # pylint: disable=R0913,R0912
         if assignment_statements:
             console.print("\n of assignment statements: " + \
             str(pycount.count_assignment_statements()))
+
+        if augmented_assignment_statements:
+            console.print("\n of augmented assignment" + "statements: " + \
+            str(pycount.count_augmented_assignment_statements()))
 
         if while_loops:
             console.print("\n of while loop statements: " + \

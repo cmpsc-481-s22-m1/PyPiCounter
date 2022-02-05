@@ -91,10 +91,10 @@ def test_function_parameters():
 
 def test_count_assignment_statements():
     """Test case to see if 'assignment statements' argument is correct."""
-    if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
+    assign_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                        "--assignment-statements"])
-    assert if_state.exit_code == 0
-    assert "assignment statements" in if_state.stdout
+    assert assign_state.exit_code == 0
+    assert "assignment statements" in assign_state.stdout
 
 def testing_valid_file():
     """Test case for a non-valid file exception."""
