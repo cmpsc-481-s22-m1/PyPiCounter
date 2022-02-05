@@ -10,7 +10,7 @@ class TestClass:
         "Test for augmented and regular assign state"
         xyz = 2
         xyz +=4
-        print(x)
+        print(xyz)
 
     def __init__(self, name, age):
         "Init function that defines the parameters."
