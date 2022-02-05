@@ -91,18 +91,17 @@ def test_function_parameters():
 
 def test_count_assignment_statements():
     """Test case to see if 'assignment statements' argument is correct."""
-    if_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
+    assign_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
                                        "--assignment-statements"])
-    assert if_state.exit_code == 0
-    assert "assignment statements" in if_state.stdout
+    assert assign_state.exit_code == 0
+    assert "assignment statements" in assign_state.stdout
 
 def test_count_augmented_assignment_statements():
     """Test case to see if 'augmented assignment statements' argument is correct."""
-    aug_assign_state = cli_runner.invoke(cli, ["--input-file", \
-                                       "tests/input/sample_file.py", \
-                                       "--augmented_assignment_statements"])
+    aug_assign_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
+                                       "--augmented-assignment-statements")
     assert aug_assign_state.exit_code == 0
-    assert "1" in aug_assign_state.stdout
+    assert "augmented assignment statements" in aug_assign_state.stdout
 
 def testing_valid_file():
     """Test case for a non-valid file exception."""

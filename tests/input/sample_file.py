@@ -6,6 +6,8 @@ import pytest  # pylint: disable=W0611
 class TestClass:
     "This is a test class for the py counter."
     real_age = 10
+    x = 2
+    x +=4
 
     def __init__(self, name, age):
         "Init function that defines the parameters."
@@ -22,12 +24,6 @@ class TestClass:
 
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
-
-    def test_assign_state(self): # pylint: disable=C0116,R0201
-        "Test for augmented and regular assign state"
-        two = 2
-        two +=4
-        print("Here are numbers:", two)
 
 # Output: 10
 print(TestClass.real_age)
