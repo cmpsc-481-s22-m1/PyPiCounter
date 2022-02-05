@@ -154,7 +154,7 @@ poetry run pypicount --[argument] --input-file path/to/file
 Sample run command:
 
 ```python
-poetry run pypicount --class_with_docstrings --input-file tests/input/sample_file.py
+poetry run pypicount --class-with-docstrings --input-file tests/input/sample_file.py
 ```
 
 Sample Output:
