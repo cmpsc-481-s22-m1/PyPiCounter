@@ -96,13 +96,6 @@ def test_count_assignment_statements():
     assert assign_state.exit_code == 0
     assert "assignment statements" in assign_state.stdout
 
-def test_count_augmented_assignment_statements():
-    """Test case to see if 'augmented assignment statements' argument is correct."""
-    aug_assign_state = cli_runner.invoke(cli, ["tests/input/sample_file.py", \
-                                       "--augmented-assignment-statements"])
-    assert aug_assign_state.exit_code == 0
-    assert "augmented assignment statements" in aug_assign_state.stdout
-
 def testing_valid_file():
     """Test case for a non-valid file exception."""
     nonvalid_file = cli_runner.invoke(cli, ["test/input/text.txt", \
