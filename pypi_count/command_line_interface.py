@@ -14,7 +14,7 @@ console = Console()
 
 
 @cli.command()
-def main(  # pylint: disable=R0913,R0912
+def main(  # pylint: disable=R0913,R0912,R0914
     input_file: Path,
     class_def: bool = typer.Option(False, "--class-definitions"),
     import_statements: bool = typer.Option(False, "--import-statements"),
