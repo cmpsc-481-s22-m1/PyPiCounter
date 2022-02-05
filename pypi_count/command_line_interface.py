@@ -76,6 +76,11 @@ def main(  # pylint: disable=R0913,R0912
             console.print("\n of assignment statements: " + \
             str(pycount.count_assignment_statements()))
 
+        if augmented_assignment_statements:
+            console.print("\n of augmented assignment" + \
+            "statements: " + str(pycount.count_augmented_\
+            assignment_statements()))
+
         if while_loops:
             console.print("\n of while loop statements: " + \
             str(pycount.count_while_loops()))
