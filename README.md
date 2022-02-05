@@ -46,7 +46,7 @@ to identify in the source code (as LibCST will find all matches of this construc
 
 ### Importing into Another Grading Tool
 
-1. Install from PyPi by running `poetry add pypicount` in your terminal.
+1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
 2. Import the PyPiCounter package with the syntax: `import pypi_count`.
 3. Run the functions in the package using the `PiPyCount.[function]` syntax.
 For example, `PiPyCount.count_class_definitions(file_name)`
