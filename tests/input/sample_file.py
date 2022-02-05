@@ -23,7 +23,7 @@ class TestClass:
     def sample_function(self): # pylint: disable=C0116,R0201
         print("Where did my docstring go?")
 
-    def test_assign_state(self):
+    def test_assign_state(self): # pylint: disable=C0116,R0201
         "Test for augmented and regular assign state"
         two = 2
         two +=4
