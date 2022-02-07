@@ -47,11 +47,11 @@ to identify in the source code (as LibCST will find all matches of this construc
 ### Importing into Another Grading Tool
 
 1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
-2. Import the PyPiCounter package with the syntax: 
+2. Import the PyPiCounter package with the syntax:
 `from pypi_count.py_counter import PyPiCount`.
 3. Call `PyPiCount` Class on specified file with the following syntax:
 `stored_path = PyPiCount("path_to_file")`
-Throughout this example, `stored_path` is an instance variable that stores the 
+Throughout this example, `stored_path` is an instance variable that stores the
 result of the parsed file. Functions must be called on a parsed file.
 4. Run the functions in the package using the `stored_path.[function_name]` syntax.
 For example, `stored_path.count_comments()`
@@ -67,7 +67,7 @@ console.print(f"Number of comments in this file: {stored_path.count_comments()}"
 
 Will produce:
 
-```
+```python
 
 Number of comments in this file: 26
 
