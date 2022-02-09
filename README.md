@@ -57,7 +57,7 @@ result of the parsed file. Functions must be called on a parsed file.
 For example, `stored_path.count_comments()`
 
 For best results, we recommend adding a print statement, as the functions
-will only display the number of the specified construct. For example,
+will only return the number of the specified construct. For example,
 
 ```python
 
