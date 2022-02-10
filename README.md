@@ -1,7 +1,6 @@
-![PyPi-Counter](picture/design.png)
-
 # PyPi-Counter
 
+![PyPi-Counter](picture/design.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
 ![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
