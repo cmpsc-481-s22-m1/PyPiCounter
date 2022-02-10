@@ -1,5 +1,6 @@
 # PyPi-Counter
 
+![PyPi-Counter](picture/design.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
 ![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
@@ -47,9 +48,31 @@ to identify in the source code (as LibCST will find all matches of this construc
 ### Importing into Another Grading Tool
 
 1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
-2. Import the PyPiCounter package with the syntax: `import pypi_count`.
-3. Run the functions in the package using the `PiPyCount.[function]` syntax.
-For example, `PiPyCount.count_class_definitions(file_name)`
+2. Import the PyPiCounter package with the syntax:
+`from pypi_count.py_counter import PyPiCount`.
+3. Call `PyPiCount` Class on specified file with the following syntax:
+`stored_path = PyPiCount("path_to_file")`
+Throughout this example, `stored_path` is an instance variable that stores the
+result of the parsed file. Functions must be called on a parsed file.
+4. Run the functions in the package using the `stored_path.[function_name]` syntax.
+For example, `stored_path.count_comments()`
+
+For best results, we recommend adding a print statement, as the functions
+will only return the number of the specified construct. For example,
+
+```python
+
+console.print(f"Number of comments in this file: {stored_path.count_comments()}")
+
+```
+
+Will produce:
+
+```python
+
+Number of comments in this file: 26
+
+```
 
 The list of functions available are:
 
@@ -102,7 +125,7 @@ an augmented assignment operator (+=, -=)
 
 Users can get started with this project by following the following steps:
 
-1. Install the package with pip, using the command `pip install pypicount`
+1. Install the package with pip, using the command `pip install pypi-counter`
 or `pipx install pypi-counter`
 2. To familiarize yourself with the arguments accepted for this project, run the
 command ```poetry run pypicount --help```. This command displays all of the

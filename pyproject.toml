@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PyPi-Counter"
-version = "0.2.0"
+version = "0.3.0"
 description = "A counting program used for different Python packages and modules."
 authors = ["Adriana Solis <solisa@allegheny.edu>, Alexis Caldwell <caldwella2@allegheny.edu>, Rachael Harris <harrisr@allegheny.edu>, Ramon Guzman <guzmanr@allegheny.edu>, Ryan Hilty <hiltyr@allegheny.edu>"]
 license = "MIT"
