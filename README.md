@@ -1,6 +1,7 @@
 # PyPi-Counter
 
 ![PyPi-Counter](picture/design.png)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![example workflow](https://github.com/cmpsc-481-s22-m1/PyPiCounter/actions/workflows/main.yml/badge.svg)
 ![github issues](https://img.shields.io/github/issues/cmpsc-481-s22-m1/PyPiCounter)
@@ -46,6 +47,41 @@ to identify in the source code (as LibCST will find all matches of this construc
 ## Getting Started
 
 ### Importing into Another Grading Tool
+
+If you would like to display the results for all of our functions, please follow
+the following steps. Please note that these steps will only work if your program
+is able to use `Typer` as a dependency.
+
+1. Install from PyPi by running `poetry add pypi-counter` or `pip install pypi`
+ in your terminal.
+2. Add the following import statements to your main program file:
+`from pypi_count import command_line_interface` and `from pypi_count import *`
+and `import typer`
+3. Add the desired file you want analyzed as a part of the main arguments in the
+following way:
+
+```python
+cli = typer.Typer()
+
+@cli.command()
+def main(
+    analyze: Path = typer.Option("path/to/file"),
+):
+```
+
+Throughout this example, `analyze` is an instance variable that stores the
+result of the parsed file. Functions must be called on a parsed file.
+4. Add the following syntax inside your main function:
+`command_line_interface.main(analyze)`.
+This will display the counting results for **all** of our available functions in
+the format that they are given.
+
+________________________________________________________________________________
+
+Alternatively, the following steps should be used if you would like to add the
+PyPi-Counter as a part of your program or project. This will ensure that only
+specified functions will be displayed in your output along with the rest of your
+program.
 
 1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
 2. Import the PyPiCounter package with the syntax:
@@ -125,59 +161,79 @@ an augmented assignment operator (+=, -=)
 
 Users can get started with this project by following the following steps:
 
-1. Install the package with pip, using the command `pip install pypi-counter`
-or `pipx install pypi-counter`
+1. Install the package with pip, using the command `pip install pypi-counter`,
+`pipx install pypi-counter`, or ```poetry add pypi-counter```
 2. To familiarize yourself with the arguments accepted for this project, run the
-command ```poetry run pypicount --help```. This command displays all of the
-different arguments that can be passed. The list of the different arguments
-are listed below:
-
-  ```python
- Usage: pypicount [OPTIONS] INPUT_FILE
-
-  Main method to display the different options.
-
-Arguments:
-  INPUT_FILE  [required]
-
-Options:
-  --class-definitions             [default: False]
-  --import-statements             [default: False]
-  --comments                      [default: False]
-  --function-definitions          [default: False]
-  --if-statements                 [default: False]
-  --function-without-docstrings   [default: False]
-  --function-with-docstrings      [default: False]
-  --class-with-docstrings         [default: False]
-  --class-without-docstrings      [default: False]
-  --function-parameters TEXT
-  --assignment-statements         [default: False]
-  --augmented-assignment-statements
-                                  [default: False]
-  --while-loops                   [default: False]
-  --for-loops                     [default: False]
-  --install-completion            Install completion for the current shell.
-  --show-completion               Show completion for the current shell, to
-                                  copy it or customize the installation.
-
-  --help                          Show this message and exit.
-
-  ```
-
-These are the different types of arguments that PyPiCount will accept in this release.
-
-Once you find your chosen arguments, run the following:
+command ```poetry run pypicount --help``` if your program contains a poetry.lock
+file or ```pypicount --help``` if your program does not use poetry. This command
+displays all of the different arguments that can be passed. The list of the
+different arguments are listed below:
 
 ```python
-poetry run pypicount --[argument] --input-file path/to/file
+  Usage: pypicount [OPTIONS] INPUT_FILE
+
+    Main method to display the different options.
+
+  Arguments:
+    INPUT_FILE  [required]
+
+  Options:
+    --class-definitions             [default: False]
+    --import-statements             [default: False]
+    --comments                      [default: False]
+    --function-definitions          [default: False]
+    --if-statements                 [default: False]
+    --function-without-docstrings   [default: False]
+    --function-with-docstrings      [default: False]
+    --class-with-docstrings         [default: False]
+    --class-without-docstrings      [default: False]
+    --function-parameters TEXT
+    --assignment-statements         [default: False]
+    --augmented-assignment-statements
+                                    [default: False]
+    --while-loops                   [default: False]
+    --for-loops                     [default: False]
+    --install-completion            Install completion for the current shell.
+    --show-completion               Show completion for the current shell, to
+                                    copy it or customize the installation.
+
+    --help                          Show this message and exit.
+```
+
+These are the different types of arguments that PyPi-Counter will accept in this
+release. As the path to a file is a required parameter, you will not be able to
+run this program without specifying a path to a file in your run command.
+
+Once you find your chosen arguments, run the following if using with poetry:
+
+```python
+poetry run pypicount --[argument] path/to/file
+```
+
+or if you are using without poetry:
+
+```python
+pypicount --[argument] path/to/file
 ```
 
 ## Example of Output
 
-Sample run command:
+Sample run command with installation using poetry:
 
 ```python
-poetry run pypicount --class-with-docstrings --input-file tests/input/sample_file.py
+poetry run pypicount --class-with-docstrings tests/input/sample_file.py
+```
+
+Sample Output:
+
+```python
+# of functions with docstrings: 1
+```
+
+Sample run command with installation using pip:
+
+```python
+pypicount --class-with-docstrings tests/input/sample_file.py
 ```
 
 Sample Output:
