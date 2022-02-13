@@ -48,12 +48,17 @@ to identify in the source code (as LibCST will find all matches of this construc
 
 ### Importing into Another Grading Tool
 
-If you would like to display the results for all of our functions, please follow the following steps. Please note that these steps will only work if your program is able to use `Typer` as a dependency.
+If you would like to display the results for all of our functions, please follow
+the following steps. Please note that these steps will only work if your program
+is able to use `Typer` as a dependency.
 
 1. Install from PyPi by running `poetry add pypi-counter` or `pip install pypi`
  in your terminal.
-2. Add the following import statements to your main program file: `from pypi_count import command_line_interface` and `from pypi_count import *` and `import typer`
-3. Add the desired file you want analyzed as a part of the main arguments in the following way:
+2. Add the following import statements to your main program file:
+`from pypi_count import command_line_interface` and `from pypi_count import *`
+and `import typer`
+3. Add the desired file you want analyzed as a part of the main arguments in the
+following way:
 ```python
 cli = typer.Typer()
 
@@ -64,14 +69,19 @@ def main(
 ```
 Throughout this example, `analyze` is an instance variable that stores the
 result of the parsed file. Functions must be called on a parsed file.
-4. Add the following syntax inside your main function: `command_line_interface.main(analyze)`.
-This will display the counting results for **all** of our available functions in the format that they are given.
+4. Add the following syntax inside your main function:
+`command_line_interface.main(analyze)`.
+This will display the counting results for **all** of our available functions in
+ the format that they are given.
 
 
 ________________________________________________________________________________
 
 
-Alternatively, the following steps should be used if you would like to add the PyPi-Counter as a part of your program or project. This will ensure that only specified functions will be displayed in your output along with the rest of your program.
+Alternatively, the following steps should be used if you would like to add the
+PyPi-Counter as a part of your program or project. This will ensure that only
+specified functions will be displayed in your output along with the rest of your
+program.
 
 1. Install from PyPi by running `poetry add pypi-counter` in your terminal.
 2. Import the PyPiCounter package with the syntax:
@@ -155,10 +165,10 @@ Users can get started with this project by following the following steps:
 1. Install the package with pip, using the command `pip install pypi-counter`,
 `pipx install pypi-counter`, or ```poetry add pypi-counter```
 2. To familiarize yourself with the arguments accepted for this project, run the
-command ```poetry run pypicount --help``` if your program contains a poetry.lock file
-or ```pypicount --help``` if your program does not use poetry. This command displays
-all of the different arguments that can be passed. The list of the different arguments
-are listed below:
+command ```poetry run pypicount --help``` if your program contains a poetry.lock
+file or ```pypicount --help``` if your program does not use poetry. This command
+displays all of the different arguments that can be passed. The list of the
+different arguments are listed below:
 
   ```python
   Usage: pypicount [OPTIONS] INPUT_FILE
@@ -191,9 +201,9 @@ are listed below:
     --help                          Show this message and exit.
   ```
 
-These are the different types of arguments that PyPi-Counter will accept in this release.
-As the path to a file is a required parameter, you will not be able to run this
-program without specifying a path to a file in your run command.
+These are the different types of arguments that PyPi-Counter will accept in this
+release. As the path to a file is a required parameter, you will not be able to
+run this program without specifying a path to a file in your run command.
 
 Once you find your chosen arguments, run the following if using with poetry:
 
