@@ -9,6 +9,8 @@
         "pylint",
         "taskipy",
         "Hilty",
+        "Typer",
+        "typer",
         "PyCount",
         "markdownlint",
         "pyproject",
