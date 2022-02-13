@@ -59,6 +59,7 @@ is able to use `Typer` as a dependency.
 and `import typer`
 3. Add the desired file you want analyzed as a part of the main arguments in the
 following way:
+
 ```python
 cli = typer.Typer()
 
@@ -72,11 +73,9 @@ result of the parsed file. Functions must be called on a parsed file.
 4. Add the following syntax inside your main function:
 `command_line_interface.main(analyze)`.
 This will display the counting results for **all** of our available functions in
- the format that they are given.
-
+the format that they are given.
 
 ________________________________________________________________________________
-
 
 Alternatively, the following steps should be used if you would like to add the
 PyPi-Counter as a part of your program or project. This will ensure that only
@@ -109,7 +108,6 @@ Will produce:
 Number of comments in this file: 26
 
 ```
-
 
 The list of functions available are:
 
@@ -170,7 +168,7 @@ file or ```pypicount --help``` if your program does not use poetry. This command
 displays all of the different arguments that can be passed. The list of the
 different arguments are listed below:
 
-  ```python
+```python
   Usage: pypicount [OPTIONS] INPUT_FILE
 
     Main method to display the different options.
@@ -199,7 +197,7 @@ different arguments are listed below:
                                     copy it or customize the installation.
 
     --help                          Show this message and exit.
-  ```
+```
 
 These are the different types of arguments that PyPi-Counter will accept in this
 release. As the path to a file is a required parameter, you will not be able to
