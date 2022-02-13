@@ -68,6 +68,7 @@ def main(
     analyze: Path = typer.Option("path/to/file"),
 ):
 ```
+
 Throughout this example, `analyze` is an instance variable that stores the
 result of the parsed file. Functions must be called on a parsed file.
 4. Add the following syntax inside your main function:
